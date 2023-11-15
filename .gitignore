@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+lolTrackerEnv/
 
 # Spyder project settings
 .spyderproject
