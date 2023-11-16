@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class Queue(Enum):
     RANKED = 420
     NORMAL = 400
@@ -8,3 +7,4 @@ class Queue(Enum):
 
 
 MAX_GAME_COUNT = 100
+ALL_GAMES = None

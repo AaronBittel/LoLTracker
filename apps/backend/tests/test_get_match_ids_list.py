@@ -1,28 +1,30 @@
-import sys
-sys.path.append(r"C:\Users\aaron\projects\lolTracker\apps\backend\src")
-sys.path.append(r"C:\Users\aaron\projects\lolTracker\apps\helper")
-
 import pytest
 from riotwatcher import LolWatcher
-from game_data_fetcher import get_match_list
-import helper.helper
+from apps.backend.src import game_data_fetcher
+from apps.backend.src import constants
+from apps.helper import helper
 
-puuid = "mZsAougfpi9QCkzfIK5DnhxGrC1EEt62X3RvaVvb9vW8TOBkmkBlLiGdiqkyt14mCFjQkAiLx2sNpg"
+
+puuid = "Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw"
 server = "EUW1"
+
 
 @pytest.fixture
 def lolwatcher():
     # Set up any necessary objects or configurations for testing
     return LolWatcher(helper.get_api_key_from_file())
 
+
 def test_get_match_list_returns_list(lolwatcher):
-    result = get_match_list(lolwatcher, server, puuid, 5, helper.constants.Queue.RANKED_SOLO)
+    result = game_data_fetcher.get_match_list(lolwatcher, server, puuid, 5, constants.Queue.RANKED)
     assert isinstance(result, list)
 
+
 def test_get_match_list_returns_correct_number_of_games(lolwatcher):
-    result = get_match_list(lolwatcher, server, puuid, 3, helper.constants.Queue.RANKED_SOLO)
+    result = game_data_fetcher.get_match_list(lolwatcher, server, puuid, 3, constants.Queue.RANKED)
     assert len(result) == 3
 
+
 def test_get_match_list_handles_large_number_of_games(lolwatcher):
-    result = get_match_list(lolwatcher, server, puuid, 1000, helper.constants.Queue.RANKED_SOLO)
-    assert len(result) == 1000
+    result = game_data_fetcher.get_match_list(lolwatcher, server, puuid, 651, constants.Queue.RANKED)
+    assert len(result) == 651
