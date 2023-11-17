@@ -31,6 +31,10 @@ def get_match_list(
         if current_len == len(match_list):
             break
 
+        number_of_games -= 100
+        if 0 < number_of_games < 100:
+            count = number_of_games
+
     return match_list
 
 
@@ -58,7 +62,13 @@ def get_match_data(
             raise
 
 
-def create_game_data_generator(summoner_name: str, server: str, queue:constants.Queue, number_of_games: int, till_season_patch: NamedTuple):
+def create_game_data_generator(
+        summoner_name: str,
+        server: str,
+        queue: constants.Queue,
+        number_of_games: int,
+        till_season_patch: NamedTuple
+):
 
     region = constants.regions[server]
     api_key = helper.get_api_key_from_file()
@@ -83,7 +93,7 @@ def create_game_data_generator(summoner_name: str, server: str, queue:constants.
 
 def extract_match_patch(match_info: dict) -> NamedTuple:
     season, patch = match_info["info"]["gameVersion"].split(".")[:2]
-    return constants.SeasonPatch(season=int(season), patch=int(patch))
+    return constants.Patch(season=int(season), patch=int(patch))
 
 
 def main():
