@@ -1,13 +1,13 @@
 import riotwatcher
 from apps.backend.src import constants
 from apps.helper import helper
-from collections import namedtuple
 from typing import NamedTuple
 
 
 def get_match_list(
         lolwatcher: riotwatcher.LolWatcher,
-        region: str, puuid: str,
+        region: str,
+        puuid: str,
         number_of_games: int,
         queue: constants.Queue):
 
@@ -60,7 +60,7 @@ def get_match_data(
 
 def create_game_data_generator(summoner_name: str, server: str, number_of_games: int, till_season_patch: NamedTuple):
 
-    region = list(constants.regions.keys())[list(constants.regions.values()).index(server)]
+    region = constants.regions[server]
     api_key = helper.get_api_key_from_file()
     lolwatcher = riotwatcher.LolWatcher(api_key=api_key)
     puuid = lolwatcher.summoner.by_name(region=server, summoner_name=summoner_name)["puuid"]

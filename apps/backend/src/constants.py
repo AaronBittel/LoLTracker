@@ -9,9 +9,17 @@ class Queue(Enum):
 
 
 regions = {
-    "EUROPE": "EUW1",
-    "ASIA": "KR",
-    "AMERICAS": "NA"
+    "BR1": "AMERICAS",
+    "EUN1": "EUROPE",
+    "EUW1": "EUROPE",
+    "JP1": "ASIA",
+    "KR": "ASIA",
+    "LA1": "AMERICAS",
+    "LA2": "AMERICAS",
+    "NA1": "AMERICAS",
+    "OC1": "SEA",
+    "TR1": "EUROPE",
+    "RU": "ASIA",
 }
 
 
