@@ -3,7 +3,7 @@ import datetime
 
 
 def get_api_key_from_file():
-    file_name = r"C:\Users\Aaron\Projects\api_key.txt"
+    file_name = r"C:\Users\AaronWork\Projects\api_key.txt"
     with open(file_name, "r") as f:
         return f.read()
 

@@ -58,7 +58,7 @@ def get_match_data(
             raise
 
 
-def create_game_data_generator(summoner_name: str, server: str, number_of_games: int, till_season_patch: NamedTuple):
+def create_game_data_generator(summoner_name: str, server: str, queue:constants.Queue, number_of_games: int, till_season_patch: NamedTuple):
 
     region = constants.regions[server]
     api_key = helper.get_api_key_from_file()
@@ -70,7 +70,7 @@ def create_game_data_generator(summoner_name: str, server: str, number_of_games:
         region=region,
         puuid=puuid,
         number_of_games=number_of_games,
-        queue=constants.Queue.RANKED)
+        queue=queue)
 
     match_info_generator = get_match_data(
         lolwatcher=lolwatcher,
