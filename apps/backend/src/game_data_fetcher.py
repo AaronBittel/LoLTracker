@@ -1,7 +1,11 @@
+import logging
 import riotwatcher
 from apps.backend.src import constants
 from apps.helper import helper
 from typing import NamedTuple
+
+
+logging.basicConfig(level=logging.DEBUG, filename="logging.txt", filemode="w")
 
 
 def get_match_list(
@@ -29,7 +33,13 @@ def get_match_list(
         )
         # Break when no games where added by latest match_list_by_puuid call
         if current_len == len(match_list):
+            logging.debug(f"Games ({len(match_list)}), Stopped because no more games available.")
             break
+
+        number_of_games -= 100
+        if number_of_games < 100:
+            count = number_of_games
+            logging.debug(f"Games ({len(match_list)}), Stopped because number_of_games reached.")
 
     return match_list
 
@@ -41,11 +51,12 @@ def get_match_data(
         till_season_patch: NamedTuple):
 
     try:
-        for match_id in match_list:
+        for index, match_id in enumerate(match_list):
             match_info = lolwatcher.match.by_id(region=region, match_id=match_id)
             match_info_patch = extract_match_patch(match_info)
 
             if match_info_patch < till_season_patch:
+                logging.debug(f"Games ({index + 1}), Stopped because till_season_patch reached.")
                 break
 
             yield match_info
@@ -58,7 +69,13 @@ def get_match_data(
             raise
 
 
-def create_game_data_generator(summoner_name: str, server: str, number_of_games: int, till_season_patch: NamedTuple):
+def create_game_data_generator(
+        summoner_name: str,
+        server: str,
+        queue: constants.Queue,
+        number_of_games: int,
+        till_season_patch: NamedTuple
+):
 
     region = constants.regions[server]
     api_key = helper.get_api_key_from_file()
@@ -70,7 +87,7 @@ def create_game_data_generator(summoner_name: str, server: str, number_of_games:
         region=region,
         puuid=puuid,
         number_of_games=number_of_games,
-        queue=constants.Queue.RANKED)
+        queue=queue)
 
     match_info_generator = get_match_data(
         lolwatcher=lolwatcher,
@@ -83,7 +100,7 @@ def create_game_data_generator(summoner_name: str, server: str, number_of_games:
 
 def extract_match_patch(match_info: dict) -> NamedTuple:
     season, patch = match_info["info"]["gameVersion"].split(".")[:2]
-    return constants.SeasonPatch(season=int(season), patch=int(patch))
+    return constants.Patch(season=int(season), patch=int(patch))
 
 
 def main():

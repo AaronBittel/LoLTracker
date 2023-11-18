@@ -25,6 +25,11 @@ def test_get_match_list_returns_correct_number_of_games(lolwatcher):
     assert len(result) == 3
 
 
-def test_get_match_list_handles_large_number_of_games(lolwatcher):
+def test_get_match_list_handles_large_number_of_games_1(lolwatcher):
     result = game_data_fetcher.get_match_list(lolwatcher, server, puuid, 651, constants.Queue.RANKED)
     assert len(result) == 651
+
+
+def test_get_match_list_handles_large_number_of_games_2(lolwatcher):
+    result = game_data_fetcher.get_match_list(lolwatcher, server, puuid, 295, constants.Queue.RANKED)
+    assert len(result) == 295

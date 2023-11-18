@@ -1,7 +1,7 @@
 from collections import namedtuple
 import pytest
 from apps.backend.src.game_data_fetcher import extract_match_patch
-from apps.backend.src.constants import SeasonPatch
+from apps.backend.src.constants import Patch
 
 
 # Define a fixture to provide sample match info
@@ -30,35 +30,35 @@ def test_extract_match_patch_different_version(sample_match_info: dict):
 def test_season_patch_is_eqaul(sample_match_info: dict):
     sample_match_info["info"]["gameVersion"] = "10.2.3"
     sample_patch = extract_match_patch(sample_match_info)
-    test_patch = SeasonPatch(10, 2)
+    test_patch = Patch(10, 2)
     assert sample_patch == test_patch
 
 
 def test_season_patch_is_ealier_1(sample_match_info: dict):
     sample_match_info["info"]["gameVersion"] = "10.2.3"
     sample_patch = extract_match_patch(sample_match_info)
-    test_patch = SeasonPatch(10, 1)
+    test_patch = Patch(10, 1)
     assert sample_patch > test_patch
 
 
 def test_season_patch_is_ealier_2(sample_match_info: dict):
     sample_match_info["info"]["gameVersion"] = "10.2.3"
     sample_patch = extract_match_patch(sample_match_info)
-    test_patch = SeasonPatch(9, 10)
+    test_patch = Patch(9, 10)
     assert sample_patch > test_patch
 
 
 def test_season_patch_is_later_1(sample_match_info: dict):
     sample_match_info["info"]["gameVersion"] = "10.2.3"
     sample_patch = extract_match_patch(sample_match_info)
-    test_patch = SeasonPatch(10, 3)
+    test_patch = Patch(10, 3)
     assert sample_patch < test_patch
 
 
 def test_season_patch_is_later_2(sample_match_info: dict):
     sample_match_info["info"]["gameVersion"] = "10.2.3"
     sample_patch = extract_match_patch(sample_match_info)
-    test_patch = SeasonPatch(11, 1)
+    test_patch = Patch(11, 1)
     assert sample_patch < test_patch
 
 
