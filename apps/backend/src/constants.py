@@ -1,6 +1,6 @@
 from enum import Enum
 from collections import namedtuple
-import requests, json
+import requests
 
 
 class Queue(Enum):
