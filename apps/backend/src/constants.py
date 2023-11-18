@@ -1,6 +1,6 @@
 from enum import Enum
 from collections import namedtuple
-import requests
+# import requests
 
 
 class Queue(Enum):
@@ -55,8 +55,10 @@ MAX_GAME_COUNT = 100
 ALL_GAMES = None
 
 
+"""
 def create_champion_id_mapping():
-    champions_data = requests.get("https://ddragon.leagueoflegends.com/cdn/13.22.1/data/en_US/champion.json").json()["data"]
+    response = requests.get("https://ddragon.leagueoflegends.com/cdn/13.22.1/data/en_US/champion.json")
+    champion_data = response.json()["data"]
     id_champion_dict = {}
     for champion_name, champion_data in champions_data.items():
         champion_key = int(champion_data["key"])
@@ -64,9 +66,10 @@ def create_champion_id_mapping():
     return id_champion_dict
 
 
-#print(json.dumps(obj=create_champion_id_mapping(), indent=4))
-#for id, champion in create_champion_id_mapping().items():
-#    print(f'{id}: "{champion}",')
+print(json.dumps(obj=create_champion_id_mapping(), indent=4))
+for id, champion in create_champion_id_mapping().items():
+    print(f'{id}: "{champion}",')
+"""
 
 ID_CHAMPION_MAPPING = {
     266: "Aatrox",
