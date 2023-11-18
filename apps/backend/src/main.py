@@ -1,6 +1,8 @@
 from apps.backend.src import game_data_fetcher
 from apps.backend.src import constants
 from apps.backend.src import data_processor
+from apps.backend.src import data_clean_up
+from apps.helper import helper
 
 import pandas as pd
 import logging
@@ -9,10 +11,10 @@ logging.basicConfig(level=logging.DEBUG, filename="logging.txt", filemode="w")
 
 
 def main():
-    summoner_name = "정신력남자"
-    server = "KR"
+    summoner_name = "Don%20Noway"  # 정신력남자
+    server = "EUW1"
     queue = constants.Queue.RANKED
-    number_of_games = 85
+    number_of_games = 10
     till_season_patch = constants.Patch(13, 1)
 
     match_info_generator, puuid = game_data_fetcher.create_game_data_generator(
@@ -25,7 +27,9 @@ def main():
 
     player_data_list = []
     for i, game_data in enumerate(match_info_generator):
+
         player_data = {}
+
         player_data.update(
             data_processor.get_data(game_data=game_data["metadata"], columns=constants.META_DATA_COLUMNS))
         player_data.update(data_processor.get_data(game_data=game_data["info"], columns=constants.INFO_DATA_COLUMNS))
@@ -59,7 +63,13 @@ def main():
         )
     )
 
-    df.to_parquet(path=r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\test_data.parquet")
+    data_clean_up.convert_unix_timestamp_ms_to_datetime(df=df, cols=["gameCreation", "gameEndTimestamp"])
+    data_clean_up.convert_game_version_to_patch(df=df, col="gameVersion")
+    data_clean_up.convert_team_position_utility_to_support(df=df, cols=["teamPosition"])
+    df["gameDuration_m_s"] = df["gameDuration"].apply(helper.convert_seconds_to_minutes_and_seconds)
+    df.set_index("matchId", inplace=True)
+
+    df.to_parquet(path=r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\NowayEUW.parquet")
 
 
 if __name__ == "__main__":

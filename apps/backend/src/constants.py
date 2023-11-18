@@ -29,14 +29,14 @@ META_DATA_COLUMNS = [
 ]
 
 INFO_DATA_COLUMNS = [
-    "gameCreation", "gameDuration", "gameVersion"
+    "gameCreation", "gameEndTimestamp", "gameDuration", "gameVersion"
 ]
 
 PARTICIPANT_DATA_COLUMNS = [
     "kills", "deaths", "assists", "championName", "firstBloodAssist", "firstBloodKill", "firstTowerAssist",
     "firstTowerKill", "gameEndedInEarlySurrender", "gameEndedInSurrender", "goldEarned", "magicDamageDealtToChampions",
-    "physicalDamageDealtToChampions", "teamEarlySurrendered", "teamPosition", "timePlayed",
-    "totalDamageDealtToChampions", "wardsKilled", "wardsPlaced", "win", "teamId"
+    "physicalDamageDealtToChampions", "teamEarlySurrendered", "teamPosition", "totalDamageDealtToChampions",
+    "wardsKilled", "wardsPlaced", "win", "teamId"
 ]
 
 ROLES_PICK_COLUMNS = [
