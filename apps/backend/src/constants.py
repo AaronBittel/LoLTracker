@@ -1,5 +1,7 @@
 from enum import Enum
 from collections import namedtuple
+
+
 # import requests
 
 
@@ -24,29 +26,89 @@ regions = {
 }
 
 
-META_DATA_COLUMNS = [
-    "matchId"
-]
+META_DATA_COLUMNS = ["matchId"]
 
-INFO_DATA_COLUMNS = [
-    "gameCreation", "gameEndTimestamp", "gameDuration", "gameVersion"
-]
+INFO_DATA_COLUMNS = ["gameCreation", "gameEndTimestamp", "gameDuration", "gameVersion"]
 
 PARTICIPANT_DATA_COLUMNS = [
-    "kills", "deaths", "assists", "championName", "firstBloodAssist", "firstBloodKill", "firstTowerAssist",
-    "firstTowerKill", "gameEndedInEarlySurrender", "gameEndedInSurrender", "goldEarned", "magicDamageDealtToChampions",
-    "physicalDamageDealtToChampions", "teamEarlySurrendered", "teamPosition", "totalDamageDealtToChampions",
-    "wardsKilled", "wardsPlaced", "win", "teamId"
+    "kills",
+    "deaths",
+    "assists",
+    "championName",
+    "firstBloodAssist",
+    "firstBloodKill",
+    "firstTowerAssist",
+    "firstTowerKill",
+    "gameEndedInEarlySurrender",
+    "gameEndedInSurrender",
+    "goldEarned",
+    "magicDamageDealtToChampions",
+    "physicalDamageDealtToChampions",
+    "teamEarlySurrendered",
+    "teamPosition",
+    "totalDamageDealtToChampions",
+    "wardsKilled",
+    "wardsPlaced",
+    "win",
+    "teamId",
 ]
 
 ROLES_PICK_COLUMNS = [
-    "bluePickTop", "bluePickJungle", "bluePickMiddle", "bluePickBottom", "bluePickSupport", "redPickTop",
-    "redPickJungle", "redPickMiddle", "redPickBottom", "redPickSupport"
+    "bluePickTop",
+    "bluePickJungle",
+    "bluePickMiddle",
+    "bluePickBottom",
+    "bluePickSupport",
+    "redPickTop",
+    "redPickJungle",
+    "redPickMiddle",
+    "redPickBottom",
+    "redPickSupport",
+]
+
+ALLY_TEAM_PICKS = [
+    "allyTopPick",
+    "allyJunglePick",
+    "allyMiddlePick",
+    "allyBottomPick",
+    "allySupportPick",
+]
+
+ENEMY_TEAM_PICKS = [
+    "enemyTopPick",
+    "enemyJunglePick",
+    "enemyMiddlePick",
+    "enemyBottomPick",
+    "enemySupportPick",
 ]
 
 ROLES_BAN_COLUMNS = [
-    'blueBanTop', 'blueBanJungle', 'blueBanMiddle', 'blueBanBottom', 'blueBanSupport', 'redBanTop', 'redBanJungle',
-    'redBanMiddle', 'redBanBottom', 'redBanSupport'
+    "blueBanTop",
+    "blueBanJungle",
+    "blueBanMiddle",
+    "blueBanBottom",
+    "blueBanSupport",
+    "redBanTop",
+    "redBanJungle",
+    "redBanMiddle",
+    "redBanBottom",
+    "redBanSupport",
+]
+
+ALLY_TEAM_BANS = [
+    "allyTopBan",
+    "allyJungleBan",
+    "allyMiddleBan",
+    "allyBottomBan",
+    "allySupportBan",
+]
+
+ENEMY_TEAM_BANS = [
+    "enemyTopBan",
+    "enemyJungleBan",
+    "enemyMiddleBan",
+    "enemyBottomBan",
+    "enemySupportBan",
 ]
 
 
@@ -70,6 +132,13 @@ print(json.dumps(obj=create_champion_id_mapping(), indent=4))
 for id, champion in create_champion_id_mapping().items():
     print(f'{id}: "{champion}",')
 """
+
+PLAYERS = {
+    "Maxi": "TqpAil-4OljSbW4-9VPxJGavdUWmRXQP33NqarYJEezLjiq31fKeF2wEh0Ni5voF4P-au0AUWIA3OA",
+    "Moritz": "_QaZtwN1a6o1o6xud2JE1sNxbbKAesF-1nMRkc6sudsXQN5FoUjlZ8NzPE83ndcUrdIHShSBOFwpOw",
+    "Niclas": "n6SWWXvRGAhZGM5ZsIRkVy3Oi8P8uvYMlDNWSsdRgqd1IVjq-lnCGDhivqyDD25uX6hOZP7-URNFTQ",
+    "Aaron": "mZsAougfpi9QCkzfIK5DnhxGrC1EEt62X3RvaVvb9vW8TOBkmkBlLiGdiqkyt14mCFjQkAiLx2sNpg",
+}
 
 ID_CHAMPION_MAPPING = {
     266: "Aatrox",
@@ -236,5 +305,5 @@ ID_CHAMPION_MAPPING = {
     115: "Ziggs",
     26: "Zilean",
     142: "Zoe",
-    143: "Zyra"
+    143: "Zyra",
 }
