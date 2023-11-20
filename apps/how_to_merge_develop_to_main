@@ -1,4 +1,4 @@
 (on branch development)$ git merge main
 (resolve any merge conflicts if there are any)
 git checkout main
-git merge development (there won't be any conflicts now)
+git merge develop (there won't be any conflicts now)
