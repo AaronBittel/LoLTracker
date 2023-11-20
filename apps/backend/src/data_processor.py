@@ -76,20 +76,16 @@ def get_puuid_to_look_out_for(
     }
 
 
-def get_blue_team_kills_deaths(participants_game_data: list[dict], team_id: int):
+def get_ally_team_kills_deaths(participants_game_data: list[dict], team_id: int):
     if team_id == 100:
-        return {
-            "totalTeamKills": sum(participants_game_data[i]["kills"] for i in range(5)),
-            "totalTeamDeaths": sum(
-                participants_game_data[i]["deaths"] for i in range(5)
-            ),
-        }
+        start, end = 0, 5
     else:
-        return {
-            "totalTeamKills": sum(
-                participants_game_data[i]["kills"] for i in range(5, 10)
-            ),
-            "totalTeamDeaths": sum(
-                participants_game_data[i]["deaths"] for i in range(5, 10)
-            ),
-        }
+        start, end = 5, 10
+    return {
+        "totalAllyTeamKills": sum(
+            participants_game_data[i]["kills"] for i in range(start, end)
+        ),
+        "totalAllyTeamDeaths": sum(
+            participants_game_data[i]["deaths"] for i in range(start, end)
+        ),
+    }

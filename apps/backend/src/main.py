@@ -13,10 +13,10 @@ def main():
     summoner_name = "정신력남자"
     server = "KR"
     queue = constants.Queue.RANKED
-    number_of_games = 10
-    till_season_patch = constants.Patch(12, 1)
+    number_of_games = 20
+    till_season_patch = constants.Patch(13, 18)
 
-    path = r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\test_data.parquet"
+    path = r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\NowayKR.parquet"
 
     match_info_generator, puuid = game_data_fetcher.create_game_data_generator(
         summoner_name=summoner_name,
@@ -92,7 +92,7 @@ def main():
         )
 
         player_data.update(
-            data_processor.get_blue_team_kills_deaths(
+            data_processor.get_ally_team_kills_deaths(
                 game_data["info"]["participants"], player_data["teamId"]
             )
         )
