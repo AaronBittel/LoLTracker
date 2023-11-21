@@ -10,13 +10,13 @@ logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filem
 
 
 def main():
-    summoner_name = "정신력남자"
-    server = "KR"
+    summoner_name = "noway2u"
+    server = "EUW1"
     queue = constants.Queue.RANKED
-    number_of_games = 20
-    till_season_patch = constants.Patch(13, 18)
+    number_of_games = 3000
+    till_season_patch = constants.Patch(12, 1)
 
-    path = r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\NowayKR.parquet"
+    path = r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\noway2uEUW.parquet"
 
     match_info_generator, puuid = game_data_fetcher.create_game_data_generator(
         summoner_name=summoner_name,
