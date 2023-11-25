@@ -2,6 +2,7 @@ from apps.backend.src import game_data_fetcher
 from apps.backend.src import constants
 from apps.backend.src import data_processor
 from apps.backend.src import data_clean_up
+from apps.backend.src import time_line_processor
 
 import pandas as pd
 import logging
@@ -10,11 +11,14 @@ logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filem
 
 
 def main():
-    summoner_name = "TRM BROSES"
+    import time
+
+    start = time.time()
+    summoner_name = "Don%20Noway"
     server = "EUW1"
-    queue = constants.Queue.ARAM
+    queue = constants.Queue.RANKED
     number_of_games = 1
-    till_season_patch = constants.Patch(13, 20)
+    till_season_patch = constants.Patch(12, 1)
 
     path = r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\test_data.parquet"
 
@@ -27,69 +31,13 @@ def main():
     )
 
     player_data_list = []
-    for i, game_data in enumerate(match_info_generator, start=1):
+
+    for i, match_info in enumerate(match_info_generator, start=1):
+        game_data, time_line = match_info
         player_data = {}
 
-        player_data.update(
-            data_processor.get_data(
-                game_data=game_data["metadata"], columns=constants.META_DATA_COLUMNS
-            )
-        )
-        player_data.update(
-            data_processor.get_data(
-                game_data=game_data["info"], columns=constants.INFO_DATA_COLUMNS
-            )
-        )
-
-        participant_index = game_data["metadata"]["participants"].index(puuid)
-
-        player_data.update(
-            data_processor.get_data(
-                game_data=game_data["info"]["participants"][participant_index],
-                columns=constants.PARTICIPANT_DATA_COLUMNS,
-            )
-        )
-
-        # player_data.update(
-        #    data_processor.get_champions_played(game_data["info"]["participants"])
-        # )
-
-        player_data.update(
-            data_processor.get_champions_played_ally_team_first(
-                participants_game_data=game_data["info"]["participants"],
-                team_id=player_data["teamId"],
-            )
-        )
-
-        player_data.update(
-            data_processor.get_lane_opponent(
-                game_data["info"]["participants"], participant_index
-            )
-        )
-
-        # player_data.update(data_processor.get_champions_banned(game_data["info"]))
-
-        player_data.update(
-            (
-                data_processor.get_champions_banned_ally_team_first(
-                    game_info_data=game_data["info"], team_id=player_data["teamId"]
-                )
-            )
-        )
-
-        player_data.update(
-            data_processor.get_puuid_to_look_out_for(
-                participants_list=game_data["metadata"]["participants"],
-                puuids=constants.PLAYERS,
-                player_puuid=puuid,
-            )
-        )
-
-        player_data.update(
-            data_processor.get_ally_team_kills_deaths(
-                game_data["info"]["participants"], player_data["teamId"]
-            )
-        )
+        generate_match_data(game_data, player_data, puuid)
+        generate_match_time_line(time_line, player_data, puuid)
 
         logging.debug(f"Added {player_data}")
         player_data_list.append(player_data)
@@ -108,13 +56,98 @@ def main():
     df.set_index("matchId", inplace=True)
 
     # drop all remake games
-    filt = df["gameDuration"] <= 5 * 60
+    filt = df["gameDuration"] <= constants.REMAKE_GAME_DURATION_THRESHOLD
     logging.info(f"{filt.sum()} games removed because of remakes.")
     df = df[~filt]
 
     data_clean_up.add_column_on_blue_side(df)
 
     df.to_parquet(path=path)
+    end = time.time()
+    seconds = end - start
+    print(f"{int(seconds // 60)} minutes {int(seconds % 60)} seconds")
+
+
+def generate_match_data(
+    game_data: dict, player_data: dict[str, str | int | bool], puuid: str
+):
+    player_data.update(
+        data_processor.get_data(
+            game_data=game_data["metadata"], columns=constants.META_DATA_COLUMNS
+        )
+    )
+    player_data.update(
+        data_processor.get_data(
+            game_data=game_data["info"], columns=constants.INFO_DATA_COLUMNS
+        )
+    )
+    participant_index = game_data["metadata"]["participants"].index(puuid)
+    player_data.update(
+        data_processor.get_data(
+            game_data=game_data["info"]["participants"][participant_index],
+            columns=constants.PARTICIPANT_DATA_COLUMNS,
+        )
+    )
+    # player_data.update(
+    #    data_processor.get_champions_played(game_data["info"]["participants"])
+    # )
+    player_data.update(
+        data_processor.get_champions_played_ally_team_first(
+            participants_game_data=game_data["info"]["participants"],
+            team_id=player_data["teamId"],
+        )
+    )
+    player_data.update(
+        data_processor.get_lane_opponent(
+            game_data["info"]["participants"], participant_index
+        )
+    )
+    # player_data.update(data_processor.get_champions_banned(game_data["info"]))
+    player_data.update(
+        (
+            data_processor.get_champions_banned_ally_team_first(
+                game_info_data=game_data["info"], team_id=player_data["teamId"]
+            )
+        )
+    )
+    player_data.update(
+        data_processor.get_puuid_to_look_out_for(
+            participants_list=game_data["metadata"]["participants"],
+            puuids=constants.PLAYERS,
+            player_puuid=puuid,
+        )
+    )
+    player_data.update(
+        data_processor.get_ally_team_kills_deaths(
+            game_data["info"]["participants"], player_data["teamId"]
+        )
+    )
+
+
+def generate_match_time_line(
+    time_line: dict, player_data: dict[str, str | int | bool], puuid: str
+):
+    participant_index = (
+        time_line["metadata"]["participants"].index(puuid) + 1
+    )  # + 1 because index starts at 1
+    # game_duration = int(time_line["info"]["frames"][-1]["timestamp"] / 60000) + 1
+    game_duration = len(time_line["info"]["frames"])
+
+    player_data.update(
+        time_line_processor.get_total_gold_per_min(
+            time_line=time_line,
+            participant_index=participant_index,
+            game_duration=game_duration,
+        )
+    )
+
+    player_data.update(
+        time_line_processor.get_cs_per_min(
+            time_line=time_line,
+            participant_index=participant_index,
+            game_duration=game_duration,
+        )
+    )
 
 
 if __name__ == "__main__":
