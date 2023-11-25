@@ -2,6 +2,12 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import altair as alt
+from apps.backend.src import constants
+
+from apps.backend.src import main
+import sys
+
+sys.path.append(r"C:\Users\AaronWork\Projects\LoLTracker")
 
 
 def read_data(account: str):
@@ -86,17 +92,38 @@ def page(page_name: str, account_name: str):
 def custom_page(page_name: str):
     st.title(page_name)
     summoner_name = st.text_input("Summoner name: ")
-    server = st.selectbox("Server: ", options=["EUW", "NA", "KR"], index=0)
+    server = st.selectbox("Server: ", options=["EUW1", "NA", "KR"])
+    queue = st.selectbox(
+        "Queue: ",
+        options=[constants.Queue.RANKED, constants.Queue.NORMAL, constants.Queue.ARAM],
+    )
+
     amount_of_games = st.slider("How many games?: ", min_value=10, max_value=45, step=1)
     st.button(
         label="Submit",
         on_click=fetch_data,
-        args=[summoner_name, server, amount_of_games],
+        args=[summoner_name, server, queue, amount_of_games],
     )
 
 
-def fetch_data(summoner_name: str, server: str, amount_of_games: int):
-    st.write(f"Fetching data ... ({summoner_name}, {server}, {amount_of_games})")
+def fetch_data(
+    summoner_name: str, server: str, queue: constants.Queue, amount_of_games: int
+):
+    st.write(
+        f"Fetching data ... ({summoner_name}, {server}, {queue.value}, {amount_of_games})"
+    )
+
+    main.main(
+        summoner_name=summoner_name,
+        server=server,
+        queue=queue,
+        number_of_games=amount_of_games,
+        till_season_patch=constants.Patch(12, 1),
+        path=r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\test_data.parquet",
+    )
+
+    df = read_data("test_data")
+    st.write(df.head())
 
 
 def main_v2():

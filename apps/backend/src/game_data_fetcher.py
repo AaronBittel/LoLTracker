@@ -1,11 +1,11 @@
-import logging
+# import logging
 import riotwatcher
 from apps.backend.src import constants
 from apps.helper import helper
 from typing import NamedTuple
 
 
-logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filemode="w")
+# logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filemode="w")
 
 
 def get_match_list(
@@ -35,17 +35,17 @@ def get_match_list(
         )
         # Break when no games where added by latest match_list_by_puuid call
         if current_len == len(match_list):
-            logging.info(
-                f"Games ({len(match_list)}), Stopped because no more games available."
-            )
+            # logging.info(
+            # f"Games ({len(match_list)}), Stopped because no more games available."
+            # )
             break
 
         number_of_games -= 100
         if number_of_games < 100:
             count = number_of_games
-            logging.info(
-                f"Games ({len(match_list)}), Stopped because number_of_games reached."
-            )
+            # logging.info(
+            # f"Games ({len(match_list)}), Stopped because number_of_games reached."
+        # )
 
     return match_list
 
@@ -62,9 +62,9 @@ def get_match_data(
             match_info_patch = extract_match_patch(match_info)
 
             if match_info_patch < till_season_patch:
-                logging.debug(
-                    f"Games ({index + 1}), Stopped because till_season_patch reached."
-                )
+                # logging.debug(
+                #   f"Games ({index + 1}), Stopped because till_season_patch reached."
+                # )
                 break
 
             time_line = lolwatcher.match.timeline_by_match(

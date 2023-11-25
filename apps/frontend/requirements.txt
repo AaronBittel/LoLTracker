@@ -1,0 +1,5 @@
+streamlit
+pandas
+numpy
+
+C:\Users\AaronWork\Projects\LoLTracker\apps\backend\src\constants.py

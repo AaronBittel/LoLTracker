@@ -5,24 +5,22 @@ from apps.backend.src import data_clean_up
 from apps.backend.src import time_line_processor
 
 import pandas as pd
-import logging
 
-logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filemode="w")
+# import logging
 
 
-def main():
-    import time
+# logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filemode="w")
 
-    start = time.time()
-    summoner_name = "Don%20Noway"
-    server = "EUW1"
-    queue = constants.Queue.RANKED
-    number_of_games = 1
-    till_season_patch = constants.Patch(12, 1)
 
-    path = r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\test_data.parquet"
-
-    match_info_generator, puuid = game_data_fetcher.create_game_data_generator(
+def main(
+    summoner_name: str,
+    server: str,
+    queue: constants.Queue,
+    number_of_games: int,
+    till_season_patch: constants.Patch,
+    path: str,
+):
+    df = create_data_frame(
         summoner_name=summoner_name,
         server=server,
         queue=queue,
@@ -30,21 +28,12 @@ def main():
         till_season_patch=till_season_patch,
     )
 
-    player_data_list = []
+    df = clean_up(df)
 
-    for i, match_info in enumerate(match_info_generator, start=1):
-        game_data, time_line = match_info
-        player_data = {}
+    df.to_parquet(path=path)
 
-        generate_match_data(game_data, player_data, puuid)
-        generate_match_time_line(time_line, player_data, puuid)
 
-        logging.debug(f"Added {player_data}")
-        player_data_list.append(player_data)
-        print(f"{i} Games")
-
-    df = pd.DataFrame(data=player_data_list, columns=list(player_data_list[0].keys()))
-
+def clean_up(df: pd.DataFrame):
     data_clean_up.convert_unix_timestamp_ms_to_datetime(
         df=df, cols=["gameCreation", "gameEndTimestamp"]
     )
@@ -54,18 +43,41 @@ def main():
         "%M:%S"
     )
     df.set_index("matchId", inplace=True)
-
     # drop all remake games
     filt = df["gameDuration"] <= constants.REMAKE_GAME_DURATION_THRESHOLD
-    logging.info(f"{filt.sum()} games removed because of remakes.")
+    # logging.info(f"{filt.sum()} games removed because of remakes.")
     df = df[~filt]
-
     data_clean_up.add_column_on_blue_side(df)
+    return df
 
-    df.to_parquet(path=path)
-    end = time.time()
-    seconds = end - start
-    print(f"{int(seconds // 60)} minutes {int(seconds % 60)} seconds")
+
+def create_data_frame(
+    summoner_name: str,
+    server: str,
+    queue: constants.Queue,
+    number_of_games: int,
+    till_season_patch: constants.Patch,
+):
+    match_info_generator, puuid = game_data_fetcher.create_game_data_generator(
+        summoner_name=summoner_name,
+        server=server,
+        queue=queue,
+        number_of_games=number_of_games,
+        till_season_patch=till_season_patch,
+    )
+    player_data_list = []
+    for i, match_info in enumerate(match_info_generator, start=1):
+        game_data, time_line = match_info
+        player_data = {}
+
+        generate_match_data(game_data, player_data, puuid)
+        generate_match_time_line(time_line, player_data, puuid)
+
+        # logging.debug(f"Added {player_data}")
+        player_data_list.append(player_data)
+        print(f"{i} Games")
+    df = pd.DataFrame(data=player_data_list, columns=list(player_data_list[0].keys()))
+    return df
 
 
 def generate_match_data(
@@ -151,4 +163,21 @@ def generate_match_time_line(
 
 
 if __name__ == "__main__":
-    main()
+    import time
+
+    start = time.time()
+
+    input_values = {
+        "summoner_name": "Don%20Noway",
+        "server": "EUW1",
+        "queue": constants.Queue.RANKED,
+        "number_of_games": 1,
+        "till_season_patch": constants.Patch(12, 1),
+        "path": r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\test_data.parquet",
+    }
+
+    main(**input_values)
+
+    end = time.time()
+    seconds = end - start
+    print(f"{int(seconds // 60)} minutes {int(seconds % 60)} seconds")
