@@ -67,7 +67,11 @@ def get_match_data(
                 )
                 break
 
-            yield match_info
+            time_line = lolwatcher.match.timeline_by_match(
+                region=region, match_id=match_id
+            )
+
+            yield match_info, time_line
 
     except riotwatcher.ApiError as err:
         if err.response.status_code == 429:
@@ -105,6 +109,7 @@ def create_game_data_generator(
         region=region,
         till_season_patch=till_season_patch,
     )
+
     return match_info_generator, puuid
 
 

@@ -4,6 +4,11 @@ from collections import namedtuple
 
 # import requests
 
+Patch = namedtuple("Patch", ["season", "patch"])
+MAX_GAME_COUNT = 100
+ALL_GAMES = None
+REMAKE_GAME_DURATION_THRESHOLD = 5 * 60
+
 
 class Queue(Enum):
     RANKED = 420
@@ -110,11 +115,6 @@ ENEMY_TEAM_BANS = [
     "enemyBottomBan",
     "enemySupportBan",
 ]
-
-
-Patch = namedtuple("Patch", ["season", "patch"])
-MAX_GAME_COUNT = 100
-ALL_GAMES = None
 
 
 """
