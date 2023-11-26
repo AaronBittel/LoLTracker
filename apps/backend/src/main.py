@@ -142,7 +142,6 @@ def generate_match_time_line(
     participant_index = (
         time_line["metadata"]["participants"].index(puuid) + 1
     )  # + 1 because index starts at 1
-    # game_duration = int(time_line["info"]["frames"][-1]["timestamp"] / 60000) + 1
     game_duration = len(time_line["info"]["frames"])
 
     player_data.update(

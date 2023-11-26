@@ -3,17 +3,16 @@ import numpy as np
 import pandas as pd
 import altair as alt
 import sys
+import os
 
 from apps.backend.src import main
 from apps.backend.src import constants
 
-sys.path.append(r"C:\Users\AaronWork\Projects\LoLTracker")
+sys.path.append(os.getcwd())
 
 
 def read_data(account: str):
-    return pd.read_parquet(
-        r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\{}.parquet".format(account)
-    )
+    return pd.read_parquet(r"apps\data\{}.parquet".format(account))
 
 
 def cumulative_win_lose(df: pd.DataFrame):
