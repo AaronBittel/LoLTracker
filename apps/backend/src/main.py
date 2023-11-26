@@ -6,10 +6,10 @@ from apps.backend.src import time_line_processor
 
 import pandas as pd
 
-# import logging
+import logging
 
 
-# logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filemode="w")
+logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filemode="w")
 
 
 def main(
@@ -45,7 +45,7 @@ def clean_up(df: pd.DataFrame):
     df.set_index("matchId", inplace=True)
     # drop all remake games
     filt = df["gameDuration"] <= constants.REMAKE_GAME_DURATION_THRESHOLD
-    # logging.info(f"{filt.sum()} games removed because of remakes.")
+    logging.info(f"{filt.sum()} games removed because of remakes.")
     df = df[~filt]
     data_clean_up.add_column_on_blue_side(df)
     return df
@@ -173,7 +173,7 @@ if __name__ == "__main__":
         "queue": constants.Queue.RANKED,
         "number_of_games": 1,
         "till_season_patch": constants.Patch(12, 1),
-        "path": r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\test_data.parquet",
+        "path": r"..\..\data\test_data.parquet",
     }
 
     main(**input_values)

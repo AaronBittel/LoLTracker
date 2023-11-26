@@ -2,10 +2,10 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import altair as alt
-from apps.backend.src import constants
+import sys
 
 from apps.backend.src import main
-import sys
+from apps.backend.src import constants
 
 sys.path.append(r"C:\Users\AaronWork\Projects\LoLTracker")
 
@@ -98,7 +98,7 @@ def custom_page(page_name: str):
         options=[constants.Queue.RANKED, constants.Queue.NORMAL, constants.Queue.ARAM],
     )
 
-    amount_of_games = st.slider("How many games?: ", min_value=10, max_value=45, step=1)
+    amount_of_games = st.slider("How many games?: ", min_value=5, max_value=45, step=1)
     st.button(
         label="Submit",
         on_click=fetch_data,
@@ -119,7 +119,7 @@ def fetch_data(
         queue=queue,
         number_of_games=amount_of_games,
         till_season_patch=constants.Patch(12, 1),
-        path=r"C:\Users\AaronWork\Projects\LoLTracker\apps\data\test_data.parquet",
+        path=r"apps\data\test_data.parquet",
     )
 
     df = read_data("test_data")
