@@ -1,12 +1,16 @@
+import altair
+import streamlit
 import streamlit as st
 import numpy as np
 import pandas as pd
 import altair as alt
 import sys
 import os
+from typing import Callable
 
 from apps.backend.src import main
 from apps.backend.src import constants
+from apps.frontend import streamlit_text
 
 sys.path.append(os.getcwd())
 
@@ -83,6 +87,7 @@ def show_champion_win_rate(df: pd.DataFrame, account_name: str):
 def page(page_name: str, account_name: str):
     st.title(page_name)
     df = read_data(account_name)
+
     cumulative_win_lose(df)
     show_champion_play_rate(df, account_name)
     show_champion_win_rate(df, account_name)
@@ -103,6 +108,17 @@ def custom_page(page_name: str):
         on_click=fetch_data,
         args=[summoner_name, server, queue, amount_of_games],
     )
+
+
+def container(
+    c_name: streamlit.container, title: str, description: str, create_chart: Callable
+):
+    with c_name:
+        st.header(title)
+        st.write(description)
+
+        chart = create_chart()
+        st.altair_chart(chart, use_container_width=True)
 
 
 def fetch_data(
