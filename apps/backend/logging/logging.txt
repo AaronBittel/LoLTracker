@@ -4,6 +4,8 @@ INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 20/1s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 100/120s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-INFO:root:Games (1), Stopped because number_of_games reached.
+INFO:root:Games (100), Stopped because number_of_games reached.
+INFO:root:Games (100), Stopped because no more games available.
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
+INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 112.633964 seconds...

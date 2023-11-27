@@ -3,8 +3,7 @@ import logging
 import riotwatcher
 from riotwatcher import LolWatcher
 from apps.backend.src.helper import constants
-from typing import NamedTuple, Generator
-from apps.helper import helper
+from typing import Iterator
 
 
 logging.basicConfig(
@@ -73,7 +72,7 @@ def get_match_data(
     lolwatcher: LolWatcher,
     match_id: str,
     region: str,
-    till_season_patch: NamedTuple,
+    till_season_patch: constants.Patch,
 ) -> dict | None:
     """
     Returns the match data of a given match id.
@@ -135,7 +134,7 @@ def get_time_line_data(
             raise
 
 
-def extract_match_patch(match_info: dict) -> NamedTuple:
+def extract_match_patch(match_info: dict) -> constants.Patch:
     season, patch = match_info["info"]["gameVersion"].split(".")[:2]
     return constants.Patch(season=int(season), patch=int(patch))
 
@@ -179,7 +178,7 @@ def create_match_data_iterator(
     queue: constants.Queue,
     number_of_games: int,
     till_season_patch: constants.Patch,
-) -> Generator:
+) -> Iterator:
     """
     Returns a generator that returns match data and timeline data.
 
