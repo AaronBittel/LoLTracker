@@ -5,7 +5,7 @@ from apps.helper import helper
 from typing import NamedTuple
 
 
-logging.basicConfig(level=logging.INFO, filename="../logging/logging.txt", filemode="w")
+logging.basicConfig(level=logging.INFO, filename="../../backend/logging/logging.txt", filemode="w")
 
 
 def get_match_list(

@@ -2,12 +2,13 @@ import logging
 
 import riotwatcher
 from riotwatcher import LolWatcher
-from apps.backend.src.helper import constants
+from apps.backend.src import constants
+from apps.helper import helper
 from typing import Iterator
 
 
 logging.basicConfig(
-    level=logging.DEBUG, filename="../../logging/logging.txt", filemode="w"
+    level=logging.DEBUG, filename="apps/backend/logging/logging.txt", filemode="w"
 )
 
 
@@ -210,6 +211,8 @@ def create_match_data_iterator(
         game data and timeline data as generator
 
     """
+    summoner_name = summoner_name.replace(" ", "%20")
+
     puuid = get_puuid(lolwatcher=lolwatcher, summoner_name=summoner_name, server=server)
     region = map_server_to_region(server=server)
     match_list = get_match_ids(
@@ -220,7 +223,10 @@ def create_match_data_iterator(
         queue=queue,
     )
 
-    for match_id in match_list:
+    helper.print_progress_bar(iteration=12, total=234)
+
+    for index, match_id in enumerate(match_list, start=1):
+        helper.print_progress_bar(iteration=index, total=len(match_list))
         match_data = get_match_data(
             lolwatcher=lolwatcher,
             match_id=match_id,
@@ -233,4 +239,5 @@ def create_match_data_iterator(
         time_line_data = get_time_line_data(
             lolwatcher=lolwatcher, match_id=match_id, region=region
         )
+
         yield constants.MatchData(match_data, time_line_data, puuid)

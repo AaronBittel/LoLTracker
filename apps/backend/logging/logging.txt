@@ -1,19 +1,35 @@
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): euw1.api.riotgames.com:443
-DEBUG:urllib3.connectionpool:https://euw1.api.riotgames.com:443 "GET /lol/summoner/v4/summoners/by-name/TRM%20BROSES HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://euw1.api.riotgames.com:443 "GET /lol/summoner/v4/summoners/by-name/Don%20Noway HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 20/1s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 100/120s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/60s
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): europe.api.riotgames.com:443
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/mZsAougfpi9QCkzfIK5DnhxGrC1EEt62X3RvaVvb9vW8TOBkmkBlLiGdiqkyt14mCFjQkAiLx2sNpg/ids?start=0&count=1&queue=420 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=0&count=5&queue=420 HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 20/1s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 100/120s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-INFO:root:Games (1), Stopped because number_of_games (-99) reached.
-INFO:root:Match ids Length: 1
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687073953 HTTP/1.1" 200 None
+INFO:root:Games (5), Stopped because number_of_games (-95) reached.
+INFO:root:Match ids Length: 5
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690742328 HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687073953/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690742328/timeline HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690340271 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690340271/timeline HTTP/1.1" 200 None
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690273863 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690273863/timeline HTTP/1.1" 200 None
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690209986 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690209986/timeline HTTP/1.1" 200 None
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690156907 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690156907/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
 INFO:root:0 games removed because of remakes.

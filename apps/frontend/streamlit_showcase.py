@@ -8,7 +8,7 @@ import os
 from typing import Callable
 
 from apps.backend.src import main
-from apps.backend.src.helper import constants
+from apps.backend.src import constants
 
 sys.path.append(os.getcwd())
 

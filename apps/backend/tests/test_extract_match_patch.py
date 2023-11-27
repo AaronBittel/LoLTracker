@@ -1,6 +1,6 @@
 import pytest
-from apps.backend.src.game_data_fetcher import extract_match_patch
-from apps.backend.src.helper.constants import Patch
+from apps.backend.src import extract_match_patch
+from apps.backend.src import Patch
 
 
 # Define a fixture to provide sample match info

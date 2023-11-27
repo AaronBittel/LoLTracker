@@ -1,6 +1,6 @@
 import streamlit as st
 
-from apps.backend.src.helper import constants
+from apps.backend.src import constants
 
 print(constants.Queue.RANKED.value)
 

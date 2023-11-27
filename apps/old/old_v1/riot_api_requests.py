@@ -1,6 +1,4 @@
 import requests
-import datetime
-import json
 import helper
 import riot_api_constants
 import time
@@ -10,7 +8,8 @@ API_KEY = helper.get_api_key_from_file()
 
 
 def get_puuid_by_summoner_name(server: str, summoner_name: str, api_key: str = API_KEY) -> str:
-    summoner_info_response = requests.get(riot_api_constants.GET_SUMMONER_BY_NAME.format(server, summoner_name, api_key))
+    summoner_info_response = requests.get(
+        riot_api_constants.GET_SUMMONER_BY_NAME.format(server, summoner_name, api_key))
     
     if summoner_info_response.status_code != 200:
         return summoner_info_response

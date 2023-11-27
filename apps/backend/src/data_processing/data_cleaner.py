@@ -1,8 +1,7 @@
 import logging
 
 import pandas as pd
-from apps.backend.src.data_processing import data_cleaner_methods
-from apps.backend.src.helper import constants
+from apps.backend.src import data_cleaner_methods
 
 logging.basicConfig(
     level=logging.DEBUG, filename="../../logging/logging.txt", filemode="w"

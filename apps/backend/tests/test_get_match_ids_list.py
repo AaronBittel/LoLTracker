@@ -1,7 +1,7 @@
 import pytest
 from riotwatcher import LolWatcher
-from apps.backend.src import game_data_fetcher
-from apps.backend.src.helper import constants
+from apps.old.old_v2 import game_data_fetcher
+from apps.backend.src import constants
 from apps.helper import helper
 
 
