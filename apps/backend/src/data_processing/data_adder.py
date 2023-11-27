@@ -1,5 +1,5 @@
 import pandas as pd
-from apps.backend.src import data_adder_methods
+from apps.backend.src.data_processing import data_adder_methods
 
 
 def data_add(df: pd.DataFrame) -> None:

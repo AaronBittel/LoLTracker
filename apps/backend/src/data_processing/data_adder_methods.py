@@ -1,6 +1,6 @@
 import logging
 import pandas as pd
-from apps.backend.src import constants
+from apps.backend.src.helper import constants
 
 
 logging.basicConfig(

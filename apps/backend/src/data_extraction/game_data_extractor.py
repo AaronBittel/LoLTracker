@@ -2,9 +2,9 @@ import logging
 import pandas as pd
 
 from typing import Iterator
-from apps.backend.src import match_data_extractor
-from apps.backend.src import time_line_data_extractor
-from apps.backend.src import constants
+from apps.backend.src.data_extraction import match_data_extractor
+from apps.backend.src.data_extraction import time_line_data_extractor
+from apps.backend.src.helper import constants
 
 
 logging.basicConfig(

@@ -1,10 +1,12 @@
 from riotwatcher import LolWatcher
 
-from apps.backend.src import game_data_fetcher
-from apps.backend.src import game_data_extractor
+import os
+
+from apps.backend.src.data_collection import game_data_fetcher
+from apps.backend.src.data_extraction import game_data_extractor
 from apps.helper import helper
-from apps.backend.src import constants
-from apps.backend.src import data_processor
+from apps.backend.src.helper import constants
+from apps.backend.src.data_processing import data_processor
 
 
 def main(
@@ -14,7 +16,8 @@ def main(
     number_of_games: int,
     till_season_patch: constants.Patch,
 ):
-    api_key = helper.get_api_key_from_file()
+    # api_key = helper.get_api_key_from_file()
+    api_key = "RGAPI-d0b5983c-192e-4d68-b05d-31b49be71192"
     lolwatcher = LolWatcher(api_key=api_key)
 
     match_data_iterator = game_data_fetcher.create_match_data_iterator(

@@ -1,4 +1,4 @@
-from apps.backend.src import constants
+from apps.backend.src.helper import constants
 
 
 def get_data(game_data: dict, columns: list[str]):
