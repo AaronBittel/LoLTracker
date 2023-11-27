@@ -6,6 +6,7 @@ from apps.backend.src.data_collection import game_data_fetcher
 from apps.backend.src.data_extraction import game_data_extractor
 from apps.helper import helper
 from apps.backend.src.helper import constants
+from apps.backend.src.data_processing import data_processor
 
 
 def main():
@@ -16,7 +17,7 @@ def main():
         "summoner_name": "TRM%20BROSES",
         "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 5,
+        "number_of_games": 1,
         "till_season_patch": constants.Patch(13, 19),
     }
 
@@ -25,6 +26,9 @@ def main():
     )
 
     df = game_data_extractor.create_dataframe(match_data_iterator)
+
+    df = data_processor.process_dataframe(df)
+
     df.to_parquet("test_data.parquet")
 
 
