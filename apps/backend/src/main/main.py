@@ -1,6 +1,6 @@
-from riotwatcher import LolWatcher
+import time
 
-import os
+from riotwatcher import LolWatcher
 
 from apps.backend.src.data_collection import game_data_fetcher
 from apps.backend.src.data_extraction import game_data_extractor
@@ -16,8 +16,7 @@ def main(
     number_of_games: int,
     till_season_patch: constants.Patch,
 ):
-    # api_key = helper.get_api_key_from_file()
-    api_key = "RGAPI-d0b5983c-192e-4d68-b05d-31b49be71192"
+    api_key = helper.get_api_key_from_file()
     lolwatcher = LolWatcher(api_key=api_key)
 
     match_data_iterator = game_data_fetcher.create_match_data_iterator(
@@ -41,8 +40,13 @@ if __name__ == "__main__":
         "summoner_name": "Don Noway",
         "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 5,
+        "number_of_games": 150,
         "till_season_patch": constants.Patch(13, 1),
     }
 
+    start = time.time()
+
     main(**input_values)
+    end = time.time()
+    diff = end - start
+    print(f"Execution Time: {int(diff // 60)} Minutes and {int(diff % 60)} Seconds.")
