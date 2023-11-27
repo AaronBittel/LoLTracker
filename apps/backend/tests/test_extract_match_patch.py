@@ -1,17 +1,12 @@
-from collections import namedtuple
 import pytest
 from apps.backend.src.game_data_fetcher import extract_match_patch
-from apps.backend.src.constants import Patch
+from apps.backend.src.helper.constants import Patch
 
 
 # Define a fixture to provide sample match info
 @pytest.fixture
 def sample_match_info():
-    return {
-        "info": {
-            "gameVersion": "11.1.1"
-        }
-    }
+    return {"info": {"gameVersion": "11.1.1"}}
 
 
 def test_extract_match_patch_valid_version(sample_match_info: dict):

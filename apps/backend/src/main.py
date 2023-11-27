@@ -1,5 +1,5 @@
 from apps.backend.src import game_data_fetcher
-from apps.backend.src import constants
+from apps.backend.src.helper import constants
 from apps.backend.src import data_processor
 from apps.backend.src import data_clean_up
 from apps.backend.src import time_line_processor

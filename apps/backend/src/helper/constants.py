@@ -5,6 +5,7 @@ from collections import namedtuple
 # import requests
 
 Patch = namedtuple("Patch", ["season", "patch"])
+MatchData = namedtuple("MatchData", ["match_data", "time_line_data", "puuid"])
 MAX_GAME_COUNT = 100
 ALL_GAMES = None
 REMAKE_GAME_DURATION_THRESHOLD = 5 * 60

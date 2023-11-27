@@ -1,6 +1,6 @@
 import pandas as pd
 from apps.backend.src import game_data_fetcher
-from apps.backend.src import constants
+from apps.backend.src.helper import constants
 from apps.backend.src import match_data_processor
 from apps.backend.src import time_line_processor
 from apps.helper import helper

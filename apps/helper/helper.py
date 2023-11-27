@@ -6,7 +6,7 @@ UNIX_TIMESTAMP_START = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.ut
 
 
 def get_api_key_from_file():
-    file_name = r"..\..\..\..\api_key.txt"
+    file_name = r"..\..\..\..\..\api_key.txt"
     with open(file_name, "r") as f:
         return f.read()
 

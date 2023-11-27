@@ -1,4 +1,3 @@
-import altair
 import streamlit
 import streamlit as st
 import numpy as np
@@ -9,8 +8,7 @@ import os
 from typing import Callable
 
 from apps.backend.src import main
-from apps.backend.src import constants
-from apps.frontend import streamlit_text
+from apps.backend.src.helper import constants
 
 sys.path.append(os.getcwd())
 

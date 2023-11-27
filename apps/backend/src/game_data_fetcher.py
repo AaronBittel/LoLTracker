@@ -1,6 +1,6 @@
 import logging
 import riotwatcher
-from apps.backend.src import constants
+from apps.backend.src.helper import constants
 from apps.helper import helper
 from typing import NamedTuple
 
