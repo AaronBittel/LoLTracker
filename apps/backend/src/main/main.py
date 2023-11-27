@@ -16,7 +16,7 @@ def main():
         "summoner_name": "TRM%20BROSES",
         "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 100,
+        "number_of_games": 5,
         "till_season_patch": constants.Patch(13, 19),
     }
 

@@ -1,9 +1,15 @@
+import logging
+import pandas as pd
+
 from typing import Iterator
 from apps.backend.src.data_extraction import match_data_extractor
 from apps.backend.src.data_extraction import time_line_data_extractor
 from apps.backend.src.helper import constants
 
-import pandas as pd
+
+logging.basicConfig(
+    level=logging.DEBUG, filename="../../logging/logging.txt", filemode="w"
+)
 
 
 def create_dataframe(game_data_iterator: Iterator) -> pd.DataFrame:
@@ -72,6 +78,8 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
         )
     )
 
+    logging.debug("Successfully extracted match data")
+
     return player_data
 
 
@@ -98,5 +106,7 @@ def extract_time_line_data(time_line_data: dict, puuid: str) -> dict[str, str | 
             game_duration=game_duration,
         )
     )
+
+    logging.debug("Successfully extracted time line data")
 
     return player_time_line_data

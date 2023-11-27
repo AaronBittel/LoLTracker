@@ -7,7 +7,7 @@ from typing import Iterator
 
 
 logging.basicConfig(
-    level=logging.INFO, filename="../../logging/logging.txt", filemode="w"
+    level=logging.DEBUG, filename="../../logging/logging.txt", filemode="w"
 )
 
 
@@ -33,7 +33,7 @@ def get_match_ids(
         list of match ids
 
     """
-    match_list = []
+    match_ids = []
 
     if number_of_games is None:
         number_of_games = 2000
@@ -41,8 +41,8 @@ def get_match_ids(
     count = 100 if number_of_games > 100 else number_of_games
 
     for i in range((number_of_games // constants.MAX_GAME_COUNT) + 1):
-        current_len = len(match_list)
-        match_list.extend(
+        current_len = len(match_ids)
+        match_ids.extend(
             lolwatcher.match.matchlist_by_puuid(
                 region=region,
                 puuid=puuid,
@@ -52,9 +52,9 @@ def get_match_ids(
             )
         )
         # Break when no games where added by latest match_list_by_puuid call
-        if current_len == len(match_list):
+        if current_len == len(match_ids):
             logging.info(
-                f"Games ({len(match_list)}), Stopped because no more games available."
+                f"Games ({len(match_ids)}), Stopped because no more games available."
             )
             break
 
@@ -62,10 +62,12 @@ def get_match_ids(
         if number_of_games < 100:
             count = number_of_games
             logging.info(
-                f"Games ({len(match_list)}), Stopped because number_of_games reached."
+                f"Games ({len(match_ids)}), Stopped because number_of_games ({number_of_games}) reached."
             )
 
-    return match_list
+    logging.info(f"Match ids Length: {len(match_ids)}")
+
+    return match_ids
 
 
 def get_match_data(
@@ -100,9 +102,11 @@ def get_match_data(
 
     except riotwatcher.ApiError as err:
         if err.response.status_code == 429:
-            print("We should retry in {} seconds.".format(err.headers["Retry-After"]))
+            logging.debug(
+                "We should retry in {} seconds.".format(err.headers["Retry-After"])
+            )
         else:
-            print(err)
+            logging.debug(err)
             raise
 
 
@@ -128,13 +132,25 @@ def get_time_line_data(
 
     except riotwatcher.ApiError as err:
         if err.response.status_code == 429:
-            print("We should retry in {} seconds.".format(err.headers["Retry-After"]))
+            logging.debug(
+                "We should retry in {} seconds.".format(err.headers["Retry-After"])
+            )
         else:
-            print(err)
+            logging.debug(err)
             raise
 
 
 def extract_match_patch(match_info: dict) -> constants.Patch:
+    """
+    Extracts patch of match info dict
+
+    Args:
+        match_info: match info dict
+
+    Returns:
+        Patch
+
+    """
     season, patch = match_info["info"]["gameVersion"].split(".")[:2]
     return constants.Patch(season=int(season), patch=int(patch))
 
@@ -212,6 +228,7 @@ def create_match_data_iterator(
             till_season_patch=till_season_patch,
         )
         if match_data is None:  # till_season_patch is reached
+            logging.debug(f"Reached Patch {till_season_patch}, so data fetcher stopped")
             break
         time_line_data = get_time_line_data(
             lolwatcher=lolwatcher, match_id=match_id, region=region
