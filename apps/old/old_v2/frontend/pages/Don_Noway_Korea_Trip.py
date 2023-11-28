@@ -1,10 +1,7 @@
 import streamlit as st
-import sys
-import os
 
 # sys.path.append(os.getcwd())
-from apps.frontend import streamlit_tools
-
+from apps.old.old_v2.frontend import streamlit_tools
 
 st.title("Noway Korea Trip Analytics")
 st.write("This is a page for Noway's Korea Trip Analytics.")

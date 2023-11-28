@@ -1,7 +1,7 @@
 import pytest
 from riotwatcher import LolWatcher
-from apps.old.old_v2 import game_data_fetcher
-from apps.backend.src import constants
+from apps.backend.src.data_collection import game_data_fetcher
+from apps.backend.src.helper import constants
 from apps.helper import helper
 
 
@@ -16,28 +16,28 @@ def lolwatcher():
 
 
 def test_get_match_list_returns_list(lolwatcher):
-    result = game_data_fetcher.get_match_list(
+    result = game_data_fetcher.get_match_ids(
         lolwatcher, server, puuid, 5, constants.Queue.RANKED
     )
     assert isinstance(result, list)
 
 
 def test_get_match_list_returns_correct_number_of_games(lolwatcher):
-    result = game_data_fetcher.get_match_list(
+    result = game_data_fetcher.get_match_ids(
         lolwatcher, server, puuid, 3, constants.Queue.RANKED
     )
     assert len(result) == 3
 
 
 def test_get_match_list_handles_large_number_of_games_1(lolwatcher):
-    result = game_data_fetcher.get_match_list(
+    result = game_data_fetcher.get_match_ids(
         lolwatcher, server, puuid, 651, constants.Queue.RANKED
     )
     assert len(result) == 651
 
 
 def test_get_match_list_handles_large_number_of_games_2(lolwatcher):
-    result = game_data_fetcher.get_match_list(
+    result = game_data_fetcher.get_match_ids(
         lolwatcher, server, puuid, 295, constants.Queue.RANKED
     )
     assert len(result) == 295

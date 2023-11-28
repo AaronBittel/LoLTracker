@@ -4,8 +4,7 @@ import os
 sys.path.append(os.getcwd())
 
 import streamlit as st
-from apps.frontend import streamlit_tools
-
+from apps.old.old_v2.frontend import streamlit_tools
 
 st.title("Home")
 

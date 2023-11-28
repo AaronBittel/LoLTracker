@@ -1,5 +1,5 @@
 import pandas as pd
-from apps.old.old_v2 import game_data_fetcher, match_data_processor, time_line_processor
+from apps.old.old_v2.backend import game_data_fetcher, time_line_processor, match_data_processor
 from apps.backend.src.helper import constants
 from apps.helper import helper
 from riotwatcher import LolWatcher

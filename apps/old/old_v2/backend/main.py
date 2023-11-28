@@ -1,4 +1,4 @@
-from apps.old.old_v2 import game_data_fetcher, data_clean_up, time_line_processor, data_processor
+from apps.old.old_v2.backend import game_data_fetcher, data_clean_up, time_line_processor, data_processor
 from apps.backend.src.helper import constants
 
 import pandas as pd
@@ -6,7 +6,7 @@ import pandas as pd
 import logging
 
 
-logging.basicConfig(level=logging.INFO, filename="../../backend/logging/logging.txt", filemode="w")
+logging.basicConfig(level=logging.INFO, filename="../../../backend/logging/logging.txt", filemode="w")
 
 
 def main(
