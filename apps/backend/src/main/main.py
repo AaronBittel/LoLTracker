@@ -32,16 +32,16 @@ def main(
 
     df = data_processor.process_dataframe(df)
 
-    df.to_parquet("apps/data/NowayKR.parquet")
+    df.to_parquet("apps/data/test_data.parquet")
 
 
 if __name__ == "__main__":
     input_values = {
-        "summoner_name": "정신력남자",
-        "server": "KR",
+        "summoner_name": "Don Noway",  # "정신력남자",
+        "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 450,
-        "till_season_patch": constants.Patch(13, 18),
+        "number_of_games": 800,
+        "till_season_patch": constants.Patch(13, 1),
     }
 
     start = time.time()

@@ -59,3 +59,10 @@ def print_progress_bar(
     # Print New Line on Complete
     if iteration == total:
         print()
+
+
+def print_timestamp_in_minutes_and_seconds(time_stamp):
+    time_stamp = time_stamp / 60000
+    minutes = int(time_stamp)
+    seconds = int((time_stamp - minutes) * 60)
+    print(f"in game time: {minutes}:{seconds}")

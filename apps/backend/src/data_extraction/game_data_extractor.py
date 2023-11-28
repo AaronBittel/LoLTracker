@@ -107,6 +107,19 @@ def extract_time_line_data(time_line_data: dict, puuid: str) -> dict[str, str | 
         )
     )
 
+    player_time_line_data.update(
+        time_line_data_extractor.get_early_death(
+            time_line=time_line_data, participant_index=participant_index, till_minute=5
+        )
+    )
+
+    player_time_line_data.update(
+        time_line_data_extractor.get_total_team_gold_diff(
+            time_line=time_line_data,
+            participant_index=participant_index,
+        )
+    )
+
     logging.debug("Successfully extracted time line data")
 
     return player_time_line_data

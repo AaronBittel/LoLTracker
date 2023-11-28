@@ -53,6 +53,7 @@ PARTICIPANT_DATA_COLUMNS = [
     "teamEarlySurrendered",
     "teamPosition",
     "totalDamageDealtToChampions",
+    "totalTimeSpentDead",
     "wardsKilled",
     "wardsPlaced",
     "win",
