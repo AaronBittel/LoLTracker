@@ -212,6 +212,7 @@ def create_match_data_iterator(
 
     """
     estimated_execution_time_s = number_of_games // 2 + int(number_of_games * 2 / 100) * 100
+
     print(f"Estimated Time: {estimated_execution_time_s // 60} Minutes and {estimated_execution_time_s % 60} Seconds.")
 
     summoner_name = summoner_name.replace(" ", "%20")

@@ -54,9 +54,8 @@ def print_progress_bar(
     filled_length = int(length * iteration // total)
     bar = fill * filled_length + "-" * (length - filled_length)
 
-    print(f"\r{prefix} |{bar}| {percent}% {suffix}", end=print_end)
+    print(f"\r{prefix} |{bar}| ({iteration} Games) {percent}% {suffix}", end=print_end)
 
-    print(f"\r{prefix} |{bar}| {percent}% {suffix}", end=print_end, flush=True)
     # Print New Line on Complete
     if iteration == total:
-        print(flush=True)
+        print()

@@ -32,21 +32,22 @@ def main(
 
     df = data_processor.process_dataframe(df)
 
-    df.to_parquet("apps/data/test_data.parquet")
+    df.to_parquet("apps/data/NowayKR.parquet")
 
 
 if __name__ == "__main__":
     input_values = {
-        "summoner_name": "Don Noway",
-        "server": "EUW1",
+        "summoner_name": "정신력남자",
+        "server": "KR",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 150,
-        "till_season_patch": constants.Patch(13, 1),
+        "number_of_games": 450,
+        "till_season_patch": constants.Patch(13, 18),
     }
 
     start = time.time()
 
     main(**input_values)
+
     end = time.time()
     diff = end - start
     print(f"Execution Time: {int(diff // 60)} Minutes and {int(diff % 60)} Seconds.")
