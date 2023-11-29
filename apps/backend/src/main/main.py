@@ -11,6 +11,7 @@ from apps.backend.src.data_processing import data_processor
 
 def main(
     summoner_name: str,
+    tagline: str,
     server: str,
     queue: constants.Queue,
     number_of_games: int,
@@ -22,6 +23,7 @@ def main(
     match_data_iterator = game_data_fetcher.create_match_data_iterator(
         lolwatcher=lolwatcher,
         summoner_name=summoner_name,
+        tagline=tagline,
         server=server,
         queue=queue,
         number_of_games=number_of_games,
@@ -32,15 +34,16 @@ def main(
 
     df = data_processor.process_dataframe(df)
 
-    df.to_parquet("apps/data/test_data.parquet")
+    df.to_parquet("apps/data/agurin.parquet")
 
 
 if __name__ == "__main__":
     input_values = {
-        "summoner_name": "Don Noway",  # "정신력남자",
+        "summoner_name": "Wufo",  # "정신력남자",
+        "tagline": "xdd",
         "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 800,
+        "number_of_games": 100,
         "till_season_patch": constants.Patch(13, 1),
     }
 

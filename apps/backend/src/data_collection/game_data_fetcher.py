@@ -1,4 +1,5 @@
 import logging
+import requests
 
 import riotwatcher
 from riotwatcher import LolWatcher
@@ -156,22 +157,29 @@ def extract_match_patch(match_info: dict) -> constants.Patch:
     return constants.Patch(season=int(season), patch=int(patch))
 
 
-def get_puuid(lolwatcher: riotwatcher.LolWatcher, summoner_name: str, server: str):
+def get_puuid(api_key: str, summoner_name: str, tagline: str, region: str):
     """
     Returns puuid of the account with summoner_name in server.
 
     Args:
-        lolwatcher: riotwatcher API
+        api_key: Riot api key
         summoner_name: summoner name of player
-        server: server of player
+        tagline: tagline of account
+        region: region of player
 
     Returns:
         puuid of player
 
     """
-    return lolwatcher.summoner.by_name(region=server, summoner_name=summoner_name)[
-        "puuid"
-    ]
+    # return lolwatcher.summoner.by_name(region=server, summoner_name=summoner_name)[
+    #    "puuid"
+    # ]
+
+    return requests.get(
+        constants.ACCOUNT_BY_GAME_NAME_TAGLINE.format(
+            region, summoner_name, tagline, api_key
+        )
+    ).json()["puuid"]
 
 
 def map_server_to_region(server: str) -> str:
@@ -191,6 +199,7 @@ def map_server_to_region(server: str) -> str:
 def create_match_data_iterator(
     lolwatcher: riotwatcher.LolWatcher,
     summoner_name: str,
+    tagline: str,
     server: str,
     queue: constants.Queue,
     number_of_games: int,
@@ -211,14 +220,24 @@ def create_match_data_iterator(
         game data and timeline data as generator
 
     """
-    estimated_execution_time_s = number_of_games // 2 + int(number_of_games * 2 / 100) * 100
+    estimated_execution_time_s = (
+        number_of_games // 2 + int(number_of_games * 2 / 100) * 100
+    )
 
-    print(f"Estimated Time: {estimated_execution_time_s // 60} Minutes and {estimated_execution_time_s % 60} Seconds.")
+    print(
+        f"Estimated Time: {estimated_execution_time_s // 60} Minutes and {estimated_execution_time_s % 60} Seconds."
+    )
 
     summoner_name = summoner_name.replace(" ", "%20")
-
-    puuid = get_puuid(lolwatcher=lolwatcher, summoner_name=summoner_name, server=server)
     region = map_server_to_region(server=server)
+
+    puuid = get_puuid(
+        api_key=helper.get_api_key_from_file(),
+        summoner_name=summoner_name,
+        tagline=tagline,
+        region=region,
+    )
+
     match_list = get_match_ids(
         lolwatcher=lolwatcher,
         region=region,

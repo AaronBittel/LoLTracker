@@ -10,6 +10,10 @@ MAX_GAME_COUNT = 100
 ALL_GAMES = None
 REMAKE_GAME_DURATION_THRESHOLD = 5 * 60
 
+ACCOUNT_BY_GAME_NAME_TAGLINE = (
+    "https://{}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{}/{}?api_key={}"
+)
+
 
 class Queue(Enum):
     RANKED = 420

@@ -1,1425 +1,420 @@
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): euw1.api.riotgames.com:443
-DEBUG:urllib3.connectionpool:https://euw1.api.riotgames.com:443 "GET /lol/summoner/v4/summoners/by-name/Don%20Noway HTTP/1.1" 200 None
-INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 20/1s
-INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 100/120s
-INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/60s
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): europe.api.riotgames.com:443
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=0&count=100&queue=420 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /riot/account/v1/accounts/by-riot-id/Wufo/xdd?api_key=RGAPI-ac338d67-3758-423d-8aed-d3c722a7fe3c HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): europe.api.riotgames.com:443
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/oeZSx8R-ZO8tjVK9xApBQmhow99bHaCfO0YsiOVXv4CZSPiTPcQCVSb2gA-3wq8NFPdxia6PhSYoOw/ids?start=0&count=100&queue=420 HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 20/1s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 100/120s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=100&count=100&queue=420 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=200&count=100&queue=420 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=300&count=100&queue=420 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=400&count=100&queue=420 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=500&count=100&queue=420 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=600&count=100&queue=420 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/Ojis3-jBDzeNHW325uynG8LlhWw5E1QqujrzHQy_w8GiFGvm1Cy4Dkk0H43hTVF7ifT3_ZwU7id-Zw/ids?start=700&count=100&queue=420 HTTP/1.1" 200 None
-INFO:root:Games (637), Stopped because no more games available.
-INFO:root:Match ids Length: 637
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695408882 HTTP/1.1" 200 None
+INFO:root:Games (100), Stopped because number_of_games (0) reached.
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/oeZSx8R-ZO8tjVK9xApBQmhow99bHaCfO0YsiOVXv4CZSPiTPcQCVSb2gA-3wq8NFPdxia6PhSYoOw/ids?start=100&count=0&queue=420 HTTP/1.1" 200 None
+INFO:root:Games (100), Stopped because no more games available.
+INFO:root:Match ids Length: 100
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6697066109 HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695408882/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6697066109/timeline HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695368930 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695368930/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6696009082 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6696009082/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695321491 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695321491/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695964259 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695964259/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695184961 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695184961/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695920195 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695920195/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695123207 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695123207/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695868114 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695868114/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695053848 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695053848/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695833992 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695833992/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694997822 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694997822/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695786938 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695786938/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694915579 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694915579/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695762978 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695762978/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694825401 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694825401/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695747490 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695747490/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694779676 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694779676/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695722267 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695722267/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694707006 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694707006/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695709701 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695709701/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694655020 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694655020/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695682234 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6695682234/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690742328 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690742328/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694735936 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694735936/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690340271 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690340271/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694674973 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694674973/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690273863 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690273863/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694634435 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694634435/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690209986 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690209986/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694589274 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694589274/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690156907 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690156907/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694555013 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694555013/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690099176 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690099176/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694521660 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694521660/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689923193 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689923193/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694471938 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694471938/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689331845 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689331845/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694436728 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694436728/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689295775 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689295775/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694397148 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6694397148/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689222286 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689222286/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692923339 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692923339/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689156154 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689156154/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692875288 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692875288/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689085093 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689085093/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692844791 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692844791/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688996673 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688996673/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692791275 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692791275/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688644065 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688644065/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692760090 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6692760090/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688587831 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688587831/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691362388 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691362388/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688536055 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688536055/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691322620 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691322620/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688478177 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688478177/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691279502 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691279502/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688424350 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688424350/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691233907 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691233907/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687907833 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687907833/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691190650 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691190650/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687845324 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687845324/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691135237 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691135237/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687764069 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687764069/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691099792 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6691099792/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687705258 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687705258/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690034512 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6690034512/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687623121 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687623121/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689978737 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689978737/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687538070 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687538070/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689929144 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689929144/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687466469 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687466469/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689890598 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689890598/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687377403 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687377403/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689837809 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689837809/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687304859 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687304859/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689782941 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689782941/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687222236 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687222236/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689733091 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689733091/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687154180 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687154180/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689703908 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689703908/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687101335 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687101335/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689672102 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689672102/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687041447 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6687041447/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689648785 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689648785/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686962278 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686962278/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689614911 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689614911/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640218914 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640218914/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689578100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6689578100/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640153056 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640153056/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688635774 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688635774/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 70.038564 seconds due to Application limit...
-INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 70.038564 seconds...
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688576542 HTTP/1.1" 200 None
+DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 90.514051 seconds due to Application limit...
+INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 90.514051 seconds...
 DEBUG:urllib3.connectionpool:Resetting dropped connection: europe.api.riotgames.com
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640098301 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640098301/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688576542/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640057034 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640057034/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688530928 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688530928/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640013568 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6640013568/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688474653 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688474653/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6639959736 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6639959736/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688416771 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688416771/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6639914983 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6639914983/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688359205 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688359205/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6638090422 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6638090422/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688325336 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688325336/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6638052341 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6638052341/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688288057 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6688288057/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637993412 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637993412/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686940579 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686940579/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637937665 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637937665/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686903599 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686903599/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637848353 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637848353/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686844909 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686844909/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637797699 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637797699/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686802372 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686802372/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637404182 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637404182/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686768408 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686768408/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637359238 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637359238/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686733314 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686733314/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637313756 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637313756/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686708134 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686708134/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637262310 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6637262310/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686687650 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6686687650/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636644091 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636644091/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685794620 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685794620/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636581075 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636581075/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685724981 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685724981/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636499336 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636499336/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685661738 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685661738/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636417918 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636417918/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685431343 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685431343/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636399516 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636399516/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685398874 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685398874/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636314760 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636314760/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685334198 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685334198/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636244602 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636244602/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685290214 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685290214/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636176833 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636176833/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685261243 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685261243/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636129493 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636129493/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685220291 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685220291/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636058665 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636058665/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685192064 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685192064/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636013667 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6636013667/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685084286 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685084286/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6635275168 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6635275168/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685068227 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6685068227/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6635201472 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6635201472/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6683981294 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6683981294/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6635122602 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6635122602/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6683142585 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6683142585/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6635056747 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6635056747/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6683068666 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6683068666/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634987511 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634987511/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6682987584 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6682987584/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634930358 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634930358/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6682907452 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6682907452/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634828768 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634828768/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6682833205 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6682833205/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634747891 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634747891/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6682763331 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6682763331/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634684402 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634684402/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681755370 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681755370/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634630231 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634630231/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681692923 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681692923/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634611459 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6634611459/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681617176 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681617176/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630556611 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630556611/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681554907 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681554907/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630488835 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630488835/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681507241 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681507241/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630427324 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630427324/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681473747 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681473747/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630343969 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630343969/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681421739 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681421739/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630272396 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630272396/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681350228 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681350228/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630219053 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6630219053/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681294524 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681294524/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6628819013 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6628819013/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681199016 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681199016/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6628756455 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6628756455/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681137158 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681137158/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6628715535 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6628715535/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681106500 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681106500/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6628663375 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6628663375/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681078462 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681078462/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627938882 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627938882/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681009055 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6681009055/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627863809 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627863809/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6680971719 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6680971719/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627772249 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627772249/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679827927 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679827927/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 88.162682 seconds due to Application limit...
-INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 88.162682 seconds...
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679783282 HTTP/1.1" 200 None
+DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 88.268798 seconds due to Application limit...
+INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 88.268798 seconds...
 DEBUG:urllib3.connectionpool:Resetting dropped connection: europe.api.riotgames.com
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627716510 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627716510/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679783282/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627649720 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627649720/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679741796 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679741796/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627592423 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627592423/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679699207 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679699207/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627547901 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627547901/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679651743 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6679651743/timeline HTTP/1.1" 200 None
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627470867 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6627470867/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626461389 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626461389/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626390631 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626390631/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626329337 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626329337/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626281232 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626281232/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626234458 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6626234458/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6610083704 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6610083704/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6610008794 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6610008794/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609945375 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609945375/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609905598 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609905598/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609832714 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609832714/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609759921 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609759921/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609154750 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609154750/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609088318 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609088318/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609040492 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6609040492/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608960250 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608960250/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608882628 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608882628/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608824710 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608824710/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608687241 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608687241/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608611664 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608611664/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608567620 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608567620/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608515975 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6608515975/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6605831663 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6605831663/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6605785046 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6605785046/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6605050268 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6605050268/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604979547 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604979547/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604565814 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604565814/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604506054 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604506054/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604453817 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604453817/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604399844 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6604399844/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6603197276 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6603197276/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6603122357 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6603122357/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6603062706 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6603062706/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601428119 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601428119/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601324211 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601324211/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601275475 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601275475/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601226067 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601226067/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601152360 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6601152360/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598883410 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598883410/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598814797 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598814797/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598385618 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598385618/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598321977 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598321977/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598291011 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598291011/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598248241 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598248241/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598228660 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598228660/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598180442 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6598180442/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 78.62138 seconds due to Application limit...
-INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 78.62138 seconds...
-DEBUG:urllib3.connectionpool:Resetting dropped connection: europe.api.riotgames.com
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597699467 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597699467/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597621375 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597621375/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597303631 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597303631/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597224129 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597224129/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597150282 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597150282/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597105384 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597105384/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597062654 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6597062654/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6595793704 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6595793704/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6595738701 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6595738701/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594348834 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594348834/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594298786 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594298786/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594265547 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594265547/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594183114 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594183114/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594133751 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594133751/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594095924 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594095924/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594031368 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6594031368/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6593999110 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6593999110/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6593933283 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6593933283/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6593107179 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6593107179/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6593037702 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6593037702/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592961935 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592961935/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592721213 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592721213/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592662944 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592662944/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592593157 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592593157/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592540760 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6592540760/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591742308 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591742308/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591656318 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591656318/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591583252 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591583252/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591511770 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591511770/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591437193 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591437193/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591384665 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591384665/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591080055 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591080055/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591036599 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6591036599/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590991887 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590991887/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590374795 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590374795/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590315640 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590315640/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590281397 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590281397/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590210398 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590210398/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590147779 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590147779/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590084875 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6590084875/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6589740287 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6589740287/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6589710709 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6589710709/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6584195910 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6584195910/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6584154928 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6584154928/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6584079014 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6584079014/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6584006795 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6584006795/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583920342 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583920342/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583821910 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583821910/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583783031 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583783031/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583703358 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583703358/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 96.594792 seconds due to Application limit...
-INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 96.594792 seconds...
-DEBUG:urllib3.connectionpool:Resetting dropped connection: europe.api.riotgames.com
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583664382 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583664382/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583629730 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6583629730/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582920858 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582920858/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582860442 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582860442/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582749877 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582749877/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582661019 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582661019/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582537532 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582537532/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582480040 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582480040/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582432215 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582432215/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582378040 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582378040/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582347143 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582347143/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582316089 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6582316089/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6580590447 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6580590447/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6580558746 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6580558746/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6580505135 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6580505135/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579929390 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579929390/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579892753 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579892753/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579848445 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579848445/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579815444 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579815444/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579792931 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6579792931/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6578773613 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6578773613/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6578708380 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6578708380/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6578666003 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6578666003/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6578600219 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6578600219/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577421397 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577421397/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577375125 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577375125/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577323184 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577323184/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577281953 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577281953/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577234363 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577234363/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577196123 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577196123/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577151272 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577151272/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577126866 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6577126866/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576382996 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576382996/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576295645 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576295645/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576228994 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576228994/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576164898 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576164898/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576111819 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576111819/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576055784 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576055784/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576008782 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6576008782/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575330211 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575330211/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575268232 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575268232/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575213948 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575213948/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575156302 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575156302/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575110273 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575110273/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575071553 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575071553/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575021680 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6575021680/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574978469 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574978469/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574937075 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574937075/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574885381 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574885381/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574823153 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574823153/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 90.782395 seconds due to Application limit...
-INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 90.782395 seconds...
-DEBUG:urllib3.connectionpool:Resetting dropped connection: europe.api.riotgames.com
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574787204 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574787204/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574736970 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6574736970/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573986546 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573986546/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573936859 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573936859/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573885971 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573885971/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573809252 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573809252/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573753543 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573753543/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573678983 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573678983/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573630907 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573630907/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573623756 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573623756/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573557351 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573557351/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573510447 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573510447/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573449194 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573449194/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573410529 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573410529/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573365729 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6573365729/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572887174 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572887174/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572839069 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572839069/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572766299 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572766299/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572703674 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572703674/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572632277 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572632277/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572585946 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572585946/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572541253 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572541253/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572467306 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572467306/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572399284 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572399284/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572345573 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572345573/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572294815 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572294815/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572247585 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572247585/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572196457 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6572196457/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6562064201 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6562064201/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6562013624 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6562013624/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561954621 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561954621/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561873126 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561873126/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561809848 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561809848/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561715156 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561715156/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561668440 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561668440/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561612298 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6561612298/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560603634 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560603634/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560538572 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560538572/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560445423 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560445423/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560381304 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560381304/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560307741 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560307741/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560246462 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560246462/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560171760 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560171760/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560102044 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560102044/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560040516 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6560040516/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6559972611 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6559972611/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6559917739 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6559917739/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6559878533 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6559878533/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6559828993 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6559828993/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558464854 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558464854/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 86.387308 seconds due to Application limit...
-INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 86.387308 seconds...
-DEBUG:urllib3.connectionpool:Resetting dropped connection: europe.api.riotgames.com
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558407623 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558407623/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558369563 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558369563/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558327150 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558327150/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558269782 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558269782/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558221927 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558221927/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558179591 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6558179591/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557426508 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557426508/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557360939 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557360939/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557306909 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557306909/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557259941 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557259941/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557203957 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557203957/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557151281 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557151281/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557123484 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557123484/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557064721 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557064721/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557020506 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6557020506/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6556962740 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6556962740/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6556912959 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6556912959/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555914220 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555914220/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555864131 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555864131/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555795927 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555795927/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555744346 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555744346/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555697185 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555697185/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555658828 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555658828/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555601784 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555601784/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555564830 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555564830/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555524446 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555524446/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555478048 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555478048/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555439542 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6555439542/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6503418589 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6503418589/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6496536194 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6496536194/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6496496516 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6496496516/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6496413533 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6496413533/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6496343348 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6496343348/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6495449416 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6495449416/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6495381132 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6495381132/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6495088039 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6495088039/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6495045498 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6495045498/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494978472 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494978472/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494916846 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494916846/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494861853 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494861853/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494785582 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494785582/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494095883 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494095883/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494032942 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6494032942/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493966215 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493966215/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493891554 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493891554/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493792276 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493792276/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493719748 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493719748/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493639114 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493639114/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493597497 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493597497/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493547030 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6493547030/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:riotwatcher.Handlers.RateLimit.BasicRateLimiter:waiting for 88.286178 seconds due to Application limit...
-INFO:riotwatcher.Handlers.RateLimiterAdapter:waiting for 88.286178 seconds...
+INFO:root:0 games removed because of remakes.
