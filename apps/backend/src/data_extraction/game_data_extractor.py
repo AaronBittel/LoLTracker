@@ -27,6 +27,7 @@ def create_dataframe(game_data_iterator: Iterator) -> pd.DataFrame:
 
 def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bool]:
     player_data = {}
+    participant_index = match_data["metadata"]["participants"].index(puuid)
 
     player_data.update(
         match_data_extractor.get_data(
@@ -38,11 +39,20 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
             game_data=match_data["info"], columns=constants.INFO_DATA_COLUMNS
         )
     )
-    participant_index = match_data["metadata"]["participants"].index(puuid)
+
     player_data.update(
         match_data_extractor.get_data(
             game_data=match_data["info"]["participants"][participant_index],
             columns=constants.PARTICIPANT_DATA_COLUMNS,
+        )
+    )
+
+    player_data.update(
+        match_data_extractor.get_data(
+            game_data=match_data["info"]["participants"][participant_index][
+                "challenges"
+            ],
+            columns=constants.PARTICIPANT_CHALLENGES_DATA_COLUMNS,
         )
     )
 
@@ -118,6 +128,16 @@ def extract_time_line_data(time_line_data: dict, puuid: str) -> dict[str, str | 
             time_line=time_line_data,
             participant_index=participant_index,
         )
+    )
+
+    player_time_line_data.update(
+        time_line_data_extractor.get_seconds_of_first_successful_jungle_gank(
+            time_line=time_line_data
+        )
+    )
+
+    player_time_line_data.update(
+        time_line_data_extractor.get_total_kills_at_minutes(time_line=time_line_data)
     )
 
     logging.debug("Successfully extracted time line data")

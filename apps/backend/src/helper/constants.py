@@ -9,6 +9,9 @@ MatchData = namedtuple("MatchData", ["match_data", "time_line_data", "puuid"])
 MAX_GAME_COUNT = 100
 ALL_GAMES = None
 REMAKE_GAME_DURATION_THRESHOLD = 5 * 60
+MINUTE_2 = 2
+TIME_LINE_BLUE_SIDE_JUNGLER_INDEX = 2
+TIME_LINE_RED_SIDE_JUNGLER_INDEX = 7
 
 ACCOUNT_BY_GAME_NAME_TAGLINE = (
     "https://{}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{}/{}?api_key={}"
@@ -63,6 +66,8 @@ PARTICIPANT_DATA_COLUMNS = [
     "win",
     "teamId",
 ]
+
+PARTICIPANT_CHALLENGES_DATA_COLUMNS = ["laneMinionsFirst10Minutes"]
 
 ROLES_PICK_COLUMNS = [
     "bluePickTop",

@@ -1,4 +1,4 @@
-from apps.helper import helper
+from apps.backend.src.helper import constants
 
 
 def get_total_gold_per_min(time_line: dict, participant_index: int, game_duration: int):
@@ -81,3 +81,50 @@ def get_total_team_gold_diff(
         )
 
     return total_team_gold_diff_at_minutes
+
+
+def get_seconds_of_first_successful_jungle_gank(time_line: dict):
+    junglers_indexes = [
+        constants.TIME_LINE_BLUE_SIDE_JUNGLER_INDEX,
+        constants.TIME_LINE_RED_SIDE_JUNGLER_INDEX,
+    ]
+    for frame in time_line["info"]["frames"]:
+        for event in frame["events"]:
+            if (
+                event["type"] == "CHAMPION_KILL"
+                and "assistingParticipantIds" in event.keys()
+            ) and (
+                event["killerId"] in junglers_indexes
+                or any(
+                    jungler_index in event["assistingParticipantIds"]
+                    for jungler_index in junglers_indexes
+                )
+            ):
+                minutes_decimal = event["timestamp"] / 60000
+
+                if minutes_decimal <= constants.MINUTE_2:
+                    continue
+
+                minutes = int(minutes_decimal)
+                seconds = int((minutes_decimal - minutes) * 60)
+                return {"firstSuccessfulJunglerGank_s": minutes * 60 + seconds}
+
+
+def get_total_kills_at_minutes(time_line: dict, at: list[int] = None):
+    game_duration = time_line["info"]["frames"][-1]["timestamp"] / 60000
+
+    total_kills_at_minutes = {}
+
+    at = [5, 10, 15, 20] if at is None else at
+    at = [minute for minute in at if minute <= game_duration]
+
+    total_kills = 0
+
+    for minute, frame in enumerate(time_line["info"]["frames"]):
+        for event in frame["events"]:
+            if event["type"] == "CHAMPION_KILL":
+                total_kills += 1
+        if minute in at:
+            total_kills_at_minutes[f"totalKillsAtMinute{minute}"] = total_kills
+
+    return total_kills_at_minutes
