@@ -1,15 +1,101 @@
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): asia.api.riotgames.com:443
 DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /riot/account/v1/accounts/by-riot-id/%EC%A0%95%EC%8B%A0%EB%A0%A5%EB%82%A8%EC%9E%90/KR1?api_key=RGAPI-95101269-3285-49ae-9ba0-2fe8f393ba0a HTTP/1.1" 200 None
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): asia.api.riotgames.com:443
-DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/yHkoNLe-mR186rkynN39frLVYFq3VvaFHlBrYqZvgslFXFaKPR7FxsE2h3lPavilFnOduruwyjhD5Q/ids?start=0&count=1&queue=420 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/yHkoNLe-mR186rkynN39frLVYFq3VvaFHlBrYqZvgslFXFaKPR7FxsE2h3lPavilFnOduruwyjhD5Q/ids?start=0&count=45&queue=420 HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 20/1s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 100/120s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-INFO:root:Games (1), Stopped because number_of_games (-99) reached.
-INFO:root:Match ids Length: 1
+INFO:root:Games (45), Stopped because number_of_games (-55) reached.
+INFO:root:Match ids Length: 45
 DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807587968 HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
 DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807587968/timeline HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): asia.api.riotgames.com:443
-DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/summoner/v4/summoners/by-puuid/yHkoNLe-mR186rkynN39frLVYFq3VvaFHlBrYqZvgslFXFaKPR7FxsE2h3lPavilFnOduruwyjhD5Q HTTP/1.1" 400 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807583215 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807583215/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807566419 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807566419/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807549124 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807549124/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807525202 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807525202/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807491827 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807491827/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807457805 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807457805/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807436448 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807436448/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807369915 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807369915/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807292160 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807292160/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806211091 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806211091/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806197538 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806197538/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806188460 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806188460/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806178635 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806178635/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806169490 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806169490/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806162185 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806162185/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806151648 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806151648/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806142780 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806142780/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806128569 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806128569/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806109349 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6806109349/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802420097 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802420097/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802412088 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802412088/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802398237 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802398237/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802385080 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802385080/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802359571 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802359571/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802338227 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802338227/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802300416 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802300416/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802262157 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802262157/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802199102 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802199102/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802124922 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802124922/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802047324 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6802047324/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800708990 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800708990/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800715104 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800715104/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800698682 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800698682/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800687820 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800687820/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800678773 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800678773/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800673762 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800673762/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800660720 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800660720/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800647105 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800647105/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800634110 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800634110/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800598370 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800598370/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800560002 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800560002/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800469372 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800469372/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800393612 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6800393612/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6799093864 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6799093864/timeline HTTP/1.1" 200 None

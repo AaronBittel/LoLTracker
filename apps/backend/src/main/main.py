@@ -15,21 +15,33 @@ from typing import Iterator
 
 def save_raw_data(
     match_data_iterator: Iterator,
-    summoner_name: str,
+    player_name: str,
     filepath: str = r"apps/data/raw_data/",
 ):
+    os.makedirs(f"{filepath}{player_name}/game_data")
+    os.makedirs(f"{filepath}{player_name}/time_line_data")
     for game_data, time_line_data, _ in match_data_iterator:
-        os.mkdir(filepath + summoner_name)
-        os.chdir(filepath + summoner_name)
         with open(
             file=filepath
-            + summoner_name
-            + "game_data"
-            + game_data["metadata"]["matchId"],
+            + player_name
+            + "/game_data/"
+            + game_data["metadata"]["matchId"]
+            + ".json",
             mode="w",
             encoding="utf-8",
         ) as f:
-            pass
+            f.write(json.dumps(game_data, indent=4))
+
+        with open(
+            file=filepath
+            + player_name
+            + "/time_line_data/"
+            + game_data["metadata"]["matchId"]
+            + ".json",
+            mode="w",
+            encoding="utf-8",
+        ) as f:
+            f.write(json.dumps(time_line_data, indent=4))
 
 
 def main(
@@ -39,6 +51,7 @@ def main(
     queue: constants.Queue,
     number_of_games: int,
     till_season_patch: constants.Patch,
+    player_name: str,
     debug: bool = False,
 ):
     api_key = helper.get_api_key_from_file()
@@ -57,11 +70,9 @@ def main(
     if not debug:
         df = game_data_extractor.create_dataframe(match_data_iterator)
         df = data_processor.process_dataframe(df)
-        df.to_parquet("apps/data/dataframes/test_data.parquet")
+        df.to_parquet(f"apps/data/dataframes/{player_name}.parquet")
     else:
-        save_raw_data(
-            match_data_iterator=match_data_iterator, summoner_name=summoner_name
-        )
+        save_raw_data(match_data_iterator=match_data_iterator, player_name=player_name)
 
 
 if __name__ == "__main__":
@@ -70,9 +81,10 @@ if __name__ == "__main__":
         "tagline": "KR1",
         "server": "KR",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 1,
+        "number_of_games": 45,
         "till_season_patch": constants.Patch(13, 1),
         "debug": True,
+        "player_name": "NowayKR",
     }
 
     start = time.time()
