@@ -232,6 +232,8 @@ def create_match_data_iterator(
 
     helper.print_progress_bar(iteration=0, total=number_of_games)
 
+    print(match_list)
+
     for index, match_id in enumerate(match_list, start=1):
         helper.print_progress_bar(iteration=index, total=number_of_games)
         match_data = get_match_data(
@@ -253,7 +255,7 @@ def create_match_data_iterator(
 def local_game_data_fetcher(filepath: str, match_list: list[str]) -> Iterator:
     for match_id in match_list:
         with open(
-            file=f"{filepath}/game_data/{match_id}.json", mode="r", encoding="utf-8"
+            file=rf"{filepath}/game_data/{match_id}.json", mode="r", encoding="utf-8"
         ) as f:
             match_data = json.load(f)
         with open(

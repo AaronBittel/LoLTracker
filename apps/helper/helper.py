@@ -79,12 +79,15 @@ def save_raw_data(
     game_mode_directory_name: str,
     filepath: str = r"apps/data/raw_data/",
 ):
-    os.makedirs(
-        f"{filepath}{player_directory_name}/{game_mode_directory_name}/game_data"
-    )
-    os.makedirs(
-        f"{filepath}{player_directory_name}/{game_mode_directory_name}/time_line_data"
-    )
+    if not os.path.exists(
+        rf"apps/data/raw_data/{player_directory_name}/{game_mode_directory_name}"
+    ):
+        os.makedirs(
+            f"{filepath}{player_directory_name}/{game_mode_directory_name}/game_data"
+        )
+        os.makedirs(
+            f"{filepath}{player_directory_name}/{game_mode_directory_name}/time_line_data"
+        )
 
     for game_data, time_line_data in match_data_iterator:
         match_id = game_data["metadata"]["matchId"]
@@ -146,3 +149,7 @@ def get_all_games_in_local(
     ]
 
     return [match_id for match_id in match_list if match_id in match_ids_in_file]
+
+
+def order_preserving_difference(list1, list2):
+    return [x for x in list1 if not x in list2]

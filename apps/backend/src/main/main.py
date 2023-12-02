@@ -118,9 +118,10 @@ def main(
                         f"apps/data/dataframes/{player_directory_name}.parquet"
                     )
                 else:
-                    match_list_to_add = list(
-                        set(match_list).difference(match_list_in_file)
+                    match_list_to_add = helper.order_preserving_difference(
+                        match_list, match_list_in_file
                     )
+
                     match_data_iterator = game_data_fetcher.create_match_data_iterator(
                         lolwatcher=lolwatcher,
                         match_list=match_list_to_add,
@@ -132,7 +133,9 @@ def main(
                         game_data_iterator=match_data_iterator, puuid=puuid
                     )
                     api_df = data_processor.process_dataframe(api_df)
-                    pd.concat([file_df, api_df]).to_parquet(
+                    pd.concat([file_df, api_df]).sort_values(
+                        by="gameCreation", ascending=False
+                    ).to_parquet(
                         f"apps/data/dataframes/{player_directory_name}.parquet"
                     )
 
@@ -153,12 +156,12 @@ def main(
 
 if __name__ == "__main__":
     input_values = {
-        "summoner_name": "TRM Fenny",  # "정신력남자",
-        "tagline": "EUW1",
-        "server": "EUW1",
+        "summoner_name": "정신력남자",
+        "tagline": "KR1",
+        "server": "KR",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 15,
-        "till_season_patch": constants.Patch(1, 1),
+        "number_of_games": 340,
+        "till_season_patch": constants.Patch(13, 19),
         "operation": constants.Operation.GET_DATA_FROM_FILE,
         "test_data": False,
     }

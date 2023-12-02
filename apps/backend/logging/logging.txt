@@ -1,13 +1,17 @@
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): europe.api.riotgames.com:443
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /riot/account/v1/accounts/by-riot-id/TRM%20Fenny/EUW1?api_key=RGAPI-95101269-3285-49ae-9ba0-2fe8f393ba0a HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): europe.api.riotgames.com:443
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/_QaZtwN1a6o1o6xud2JE1sNxbbKAesF-1nMRkc6sudsXQN5FoUjlZ8NzPE83ndcUrdIHShSBOFwpOw/ids?start=0&count=15&queue=420 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): asia.api.riotgames.com:443
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /riot/account/v1/accounts/by-riot-id/%EC%A0%95%EC%8B%A0%EB%A0%A5%EB%82%A8%EC%9E%90/KR1?api_key=RGAPI-21995ea7-629e-445a-89f3-03745ca50f30 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): asia.api.riotgames.com:443
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/yHkoNLe-mR186rkynN39frLVYFq3VvaFHlBrYqZvgslFXFaKPR7FxsE2h3lPavilFnOduruwyjhD5Q/ids?start=0&count=100&queue=420 HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 20/1s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 100/120s
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-INFO:root:Games (15), Stopped because number_of_games (-85) reached.
-INFO:root:Match ids Length: 15
-DEBUG:root:len match_list before: 15
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/yHkoNLe-mR186rkynN39frLVYFq3VvaFHlBrYqZvgslFXFaKPR7FxsE2h3lPavilFnOduruwyjhD5Q/ids?start=100&count=100&queue=420 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/yHkoNLe-mR186rkynN39frLVYFq3VvaFHlBrYqZvgslFXFaKPR7FxsE2h3lPavilFnOduruwyjhD5Q/ids?start=200&count=100&queue=420 HTTP/1.1" 200 None
+INFO:root:Games (300), Stopped because number_of_games (40) reached.
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/by-puuid/yHkoNLe-mR186rkynN39frLVYFq3VvaFHlBrYqZvgslFXFaKPR7FxsE2h3lPavilFnOduruwyjhD5Q/ids?start=300&count=40&queue=420 HTTP/1.1" 200 None
+INFO:root:Games (340), Stopped because number_of_games (-60) reached.
+INFO:root:Match ids Length: 340
+DEBUG:root:len match_list before: 340
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
 DEBUG:root:Successfully extracted match data
@@ -28,27 +32,638 @@ DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-INFO:root:1 games removed because of remakes.
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6668186320 HTTP/1.1" 200 None
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+DEBUG:root:Successfully extracted match data
+DEBUG:root:Successfully extracted time line data
+INFO:root:2 games removed because of remakes.
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807587968 HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6668186320/timeline HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6807587968/timeline HTTP/1.1" 200 None
 INFO:riotwatcher.Handlers.RateLimit.Limits:rate limit changed from 0/0s to 2000/10s
 DEBUG:root:Successfully extracted match data
 DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6667107667 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6667107667/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6667175579 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6667175579/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6670412408 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6670412408/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6665453530 HTTP/1.1" 200 None
-DEBUG:urllib3.connectionpool:https://europe.api.riotgames.com:443 "GET /lol/match/v5/matches/EUW1_6665453530/timeline HTTP/1.1" 200 None
-DEBUG:root:Successfully extracted match data
-DEBUG:root:Successfully extracted time line data
+DEBUG:urllib3.connectionpool:https://asia.api.riotgames.com:443 "GET /lol/match/v5/matches/KR_6648766975 HTTP/1.1" 200 None
+DEBUG:root:Stopped because till_season_patch reached.
+DEBUG:root:Reached Patch Patch(season=13, patch=19), so data fetcher stopped
 INFO:root:0 games removed because of remakes.
