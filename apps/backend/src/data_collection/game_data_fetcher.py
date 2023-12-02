@@ -211,6 +211,7 @@ def create_match_data_iterator(
     Args:
         lolwatcher: riotwatcher API
         summoner_name: summoner name of player
+        tagline: tagline of player
         server: server of player
         queue: game mode
         number_of_games: amount of games
@@ -220,13 +221,6 @@ def create_match_data_iterator(
         game data and timeline data as generator
 
     """
-    estimated_execution_time_s = (
-        number_of_games // 2 + int(number_of_games * 2 / 100) * 100
-    )
-
-    print(
-        f"Estimated Time: {estimated_execution_time_s // 60} Minutes and {estimated_execution_time_s % 60} Seconds."
-    )
 
     summoner_name = summoner_name.replace(" ", "%20")
     region = map_server_to_region(server=server)
@@ -244,6 +238,14 @@ def create_match_data_iterator(
         puuid=puuid,
         number_of_games=number_of_games,
         queue=queue,
+    )
+
+    estimated_execution_time_s = (
+        len(match_list) // 2 + int(len(match_list) * 2 / 100) * 100
+    )
+
+    print(
+        f"Estimated Time: {estimated_execution_time_s // 60} Minutes and {estimated_execution_time_s % 60} Seconds."
     )
 
     helper.print_progress_bar(iteration=12, total=234)

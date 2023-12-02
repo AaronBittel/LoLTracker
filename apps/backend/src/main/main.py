@@ -13,37 +13,6 @@ from apps.backend.src.data_processing import data_processor
 from typing import Iterator
 
 
-def save_raw_data(
-    match_data_iterator: Iterator,
-    player_name: str,
-    filepath: str = r"apps/data/raw_data/",
-):
-    os.makedirs(f"{filepath}{player_name}/game_data")
-    os.makedirs(f"{filepath}{player_name}/time_line_data")
-    for game_data, time_line_data, _ in match_data_iterator:
-        with open(
-            file=filepath
-            + player_name
-            + "/game_data/"
-            + game_data["metadata"]["matchId"]
-            + ".json",
-            mode="w",
-            encoding="utf-8",
-        ) as f:
-            f.write(json.dumps(game_data, indent=4))
-
-        with open(
-            file=filepath
-            + player_name
-            + "/time_line_data/"
-            + game_data["metadata"]["matchId"]
-            + ".json",
-            mode="w",
-            encoding="utf-8",
-        ) as f:
-            f.write(json.dumps(time_line_data, indent=4))
-
-
 def main(
     summoner_name: str,
     tagline: str,
@@ -72,19 +41,21 @@ def main(
         df = data_processor.process_dataframe(df)
         df.to_parquet(f"apps/data/dataframes/{player_name}.parquet")
     else:
-        save_raw_data(match_data_iterator=match_data_iterator, player_name=player_name)
+        helper.save_raw_data(
+            match_data_iterator=match_data_iterator, player_name=player_name
+        )
 
 
 if __name__ == "__main__":
     input_values = {
-        "summoner_name": "정신력남자",
-        "tagline": "KR1",
-        "server": "KR",
+        "summoner_name": "noway2u",  # "정신력남자",
+        "tagline": "EUW1",
+        "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 45,
-        "till_season_patch": constants.Patch(13, 1),
+        "number_of_games": 2000,
+        "till_season_patch": constants.Patch(12, 1),
         "debug": True,
-        "player_name": "NowayKR",
+        "player_name": "noway2u",
     }
 
     start = time.time()
