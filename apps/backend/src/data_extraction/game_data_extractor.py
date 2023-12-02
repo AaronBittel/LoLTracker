@@ -12,15 +12,14 @@ logging.basicConfig(
 )
 
 
-def create_dataframe(game_data_iterator: Iterator) -> pd.DataFrame:
+def create_dataframe(game_data_iterator: Iterator, puuid: str) -> pd.DataFrame:
     return pd.DataFrame(
         [
             {
                 **extract_match_data(match_data=match_data, puuid=puuid),
                 **extract_time_line_data(time_line_data=time_line_data, puuid=puuid),
-                "puuid": puuid,
             }
-            for match_data, time_line_data, puuid in game_data_iterator
+            for match_data, time_line_data in game_data_iterator
         ]
     )
 
@@ -34,6 +33,7 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
             game_data=match_data["metadata"], columns=constants.META_DATA_COLUMNS
         )
     )
+
     player_data.update(
         match_data_extractor.get_data(
             game_data=match_data["info"], columns=constants.INFO_DATA_COLUMNS
@@ -62,6 +62,7 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
             team_id=player_data["teamId"],
         )
     )
+
     player_data.update(
         match_data_extractor.get_lane_opponent(
             match_data["info"]["participants"], participant_index
@@ -75,13 +76,15 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
             )
         )
     )
-    player_data.update(
-        match_data_extractor.get_puuid_to_look_out_for(
-            participants_list=match_data["metadata"]["participants"],
-            puuids=constants.PLAYERS,
-            player_puuid=puuid,
-        )
-    )
+
+    # player_data.update(
+    #     match_data_extractor.get_puuid_to_look_out_for(
+    #        participants_list=match_data["metadata"]["participants"],
+    #        puuids=constants.PLAYERS,
+    #       player_puuid=puuid,
+    #    )
+    # )
+
     player_data.update(
         match_data_extractor.get_ally_team_kills_deaths(
             match_data["info"]["participants"], player_data["teamId"]

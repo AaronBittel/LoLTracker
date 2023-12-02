@@ -15,8 +15,8 @@ logging.basicConfig(
 
 def get_match_ids(
     lolwatcher: LolWatcher,
-    region: str,
     puuid: str,
+    region: str,
     number_of_games: int,
     queue: constants.Queue,
 ):
@@ -35,6 +35,7 @@ def get_match_ids(
         list of match ids
 
     """
+
     match_ids = []
 
     if number_of_games is None:
@@ -68,6 +69,10 @@ def get_match_ids(
             )
 
     logging.info(f"Match ids Length: {len(match_ids)}")
+
+    estimated_execution_time_s = (
+        len(match_ids) // 2 + int(len(match_ids) * 2 / 100) * 100
+    )
 
     return match_ids
 
@@ -171,9 +176,7 @@ def get_puuid(api_key: str, summoner_name: str, tagline: str, region: str):
         puuid of player
 
     """
-    # return lolwatcher.summoner.by_name(region=server, summoner_name=summoner_name)[
-    #    "puuid"
-    # ]
+    summoner_name = summoner_name.replace(" ", "%20")
 
     return requests.get(
         constants.ACCOUNT_BY_GAME_NAME_TAGLINE.format(
@@ -198,11 +201,8 @@ def map_server_to_region(server: str) -> str:
 
 def create_match_data_iterator(
     lolwatcher: riotwatcher.LolWatcher,
-    summoner_name: str,
-    tagline: str,
-    server: str,
-    queue: constants.Queue,
-    number_of_games: int,
+    match_list: list[str],
+    region: str,
     till_season_patch: constants.Patch,
 ) -> Iterator:
     """
@@ -222,32 +222,6 @@ def create_match_data_iterator(
 
     """
 
-    summoner_name = summoner_name.replace(" ", "%20")
-    region = map_server_to_region(server=server)
-
-    puuid = get_puuid(
-        api_key=helper.get_api_key_from_file(),
-        summoner_name=summoner_name,
-        tagline=tagline,
-        region=region,
-    )
-
-    match_list = get_match_ids(
-        lolwatcher=lolwatcher,
-        region=region,
-        puuid=puuid,
-        number_of_games=number_of_games,
-        queue=queue,
-    )
-
-    estimated_execution_time_s = (
-        len(match_list) // 2 + int(len(match_list) * 2 / 100) * 100
-    )
-
-    print(
-        f"Estimated Time: {estimated_execution_time_s // 60} Minutes and {estimated_execution_time_s % 60} Seconds."
-    )
-
     helper.print_progress_bar(iteration=12, total=234)
 
     for index, match_id in enumerate(match_list, start=1):
@@ -265,4 +239,4 @@ def create_match_data_iterator(
             lolwatcher=lolwatcher, match_id=match_id, region=region
         )
 
-        yield constants.MatchData(match_data, time_line_data, puuid)
+        yield constants.MatchData(match_data, time_line_data)

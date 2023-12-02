@@ -26,18 +26,31 @@ def main(
     api_key = helper.get_api_key_from_file()
     lolwatcher = LolWatcher(api_key=api_key)
 
+    region = game_data_fetcher.map_server_to_region(server=server)
+
+    puuid = game_data_fetcher.get_puuid(
+        api_key=api_key, summoner_name=summoner_name, tagline=tagline, region=region
+    )
+
+    match_list = game_data_fetcher.get_match_ids(
+        lolwatcher=lolwatcher,
+        puuid=puuid,
+        region=region,
+        number_of_games=number_of_games,
+        queue=queue,
+    )
+
     match_data_iterator = game_data_fetcher.create_match_data_iterator(
         lolwatcher=lolwatcher,
-        summoner_name=summoner_name,
-        tagline=tagline,
-        server=server,
-        queue=queue,
-        number_of_games=number_of_games,
+        match_list=match_list,
+        region=region,
         till_season_patch=till_season_patch,
     )
 
     if not debug:
-        df = game_data_extractor.create_dataframe(match_data_iterator)
+        df = game_data_extractor.create_dataframe(
+            game_data_iterator=match_data_iterator, puuid=puuid
+        )
         df = data_processor.process_dataframe(df)
         df.to_parquet(f"apps/data/dataframes/{player_name}.parquet")
     else:
@@ -52,10 +65,10 @@ if __name__ == "__main__":
         "tagline": "EUW1",
         "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 2000,
+        "number_of_games": 45,
         "till_season_patch": constants.Patch(12, 1),
-        "debug": True,
-        "player_name": "noway2u",
+        "debug": False,
+        "player_name": "test_data",
     }
 
     start = time.time()

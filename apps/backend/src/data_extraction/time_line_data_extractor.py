@@ -108,6 +108,7 @@ def get_seconds_of_first_successful_jungle_gank(time_line: dict):
                 minutes = int(minutes_decimal)
                 seconds = int((minutes_decimal - minutes) * 60)
                 return {"firstSuccessfulJunglerGank_s": minutes * 60 + seconds}
+    return {"remake": True}
 
 
 def get_total_kills_at_minutes(time_line: dict, at: list[int] = None):
