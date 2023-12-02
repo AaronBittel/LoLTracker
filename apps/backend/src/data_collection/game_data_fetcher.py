@@ -112,6 +112,9 @@ def get_match_data(
             logging.debug(
                 "We should retry in {} seconds.".format(err.headers["Retry-After"])
             )
+        if err.response.status_code == 404:
+            logging.debug("Match data doesnt exists anymore for this match id")
+            return
         else:
             logging.debug(err)
             raise

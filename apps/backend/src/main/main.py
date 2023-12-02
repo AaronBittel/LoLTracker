@@ -1,3 +1,4 @@
+import logging
 import time
 import json
 import os
@@ -20,8 +21,8 @@ def main(
     queue: constants.Queue,
     number_of_games: int,
     till_season_patch: constants.Patch,
-    player_name: str,
-    debug: bool = False,
+    save_data_in_file: bool = False,
+    test_data: bool = True,
 ):
     api_key = helper.get_api_key_from_file()
     lolwatcher = LolWatcher(api_key=api_key)
@@ -40,35 +41,50 @@ def main(
         queue=queue,
     )
 
-    match_data_iterator = game_data_fetcher.create_match_data_iterator(
-        lolwatcher=lolwatcher,
-        match_list=match_list,
-        region=region,
-        till_season_patch=till_season_patch,
-    )
+    if not save_data_in_file:
+        match_data_iterator = game_data_fetcher.create_match_data_iterator(
+            lolwatcher=lolwatcher,
+            match_list=match_list,
+            region=region,
+            till_season_patch=till_season_patch,
+        )
 
-    if not debug:
         df = game_data_extractor.create_dataframe(
             game_data_iterator=match_data_iterator, puuid=puuid
         )
         df = data_processor.process_dataframe(df)
-        df.to_parquet(f"apps/data/dataframes/{player_name}.parquet")
+        df.to_parquet(f"apps/data/dataframes/{summoner_name}.parquet")
+
     else:
+        summoner_name = "test_data" if test_data else summoner_name
+        logging.debug(f"len match_list before: {len(match_list)}")
+        match_list = helper.remove_already_stored_match_ids(summoner_name, match_list)
+        logging.debug(f"len match_list after: {len(match_list)}")
+
+        match_data_iterator = game_data_fetcher.create_match_data_iterator(
+            lolwatcher=lolwatcher,
+            match_list=match_list,
+            region=region,
+            till_season_patch=till_season_patch,
+        )
+
         helper.save_raw_data(
-            match_data_iterator=match_data_iterator, player_name=player_name
+            match_data_iterator=match_data_iterator,
+            summoner_name=summoner_name,
+            queue=queue,
         )
 
 
 if __name__ == "__main__":
     input_values = {
-        "summoner_name": "noway2u",  # "정신력남자",
-        "tagline": "EUW1",
-        "server": "EUW1",
+        "summoner_name": "정신력남자",
+        "tagline": "KR1",
+        "server": "KR",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 45,
-        "till_season_patch": constants.Patch(12, 1),
-        "debug": False,
-        "player_name": "test_data",
+        "number_of_games": 3000,
+        "till_season_patch": constants.Patch(1, 1),
+        "save_data_in_file": True,
+        "test_data": False,
     }
 
     start = time.time()

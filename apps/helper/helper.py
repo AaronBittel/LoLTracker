@@ -4,6 +4,8 @@ import os
 import json
 from typing import Iterator
 
+from apps.backend.src.helper import constants
+
 
 UNIX_TIMESTAMP_START = datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)
 
@@ -73,29 +75,31 @@ def print_timestamp_in_minutes_and_seconds(time_stamp):
 
 def save_raw_data(
     match_data_iterator: Iterator,
-    player_name: str,
+    summoner_name: str,
+    queue: constants.Queue,
     filepath: str = r"apps/data/raw_data/",
 ):
-    if not os.path.exists(f"{filepath}{player_name}"):
-        os.makedirs(f"{filepath}{player_name}/game_data")
-        os.makedirs(f"{filepath}{player_name}/time_line_data")
+    if not os.path.exists(f"{filepath}{summoner_name}"):
+        os.makedirs(f"{filepath}{summoner_name}/{queue.name.capitalize()}/game_data")
+        os.makedirs(
+            f"{filepath}{summoner_name}/{queue.name.capitalize()}/time_line_data"
+        )
 
-    for game_data, time_line_data, _ in match_data_iterator:
+    for game_data, time_line_data in match_data_iterator:
         match_id = game_data["metadata"]["matchId"]
 
-        if check_if_data_already_saved(player_name=player_name, match_id=match_id):
-            print(f"{match_id} already added")
+        if check_if_data_already_saved(player_name=summoner_name, match_id=match_id):
             continue
 
         with open(
-            file=filepath + player_name + "/game_data/" + match_id + ".json",
+            file=filepath + summoner_name + "/game_data/" + match_id + ".json",
             mode="w",
             encoding="utf-8",
         ) as f:
             f.write(json.dumps(game_data, indent=4))
 
         with open(
-            file=filepath + player_name + "/time_line_data/" + match_id + ".json",
+            file=filepath + summoner_name + "/time_line_data/" + match_id + ".json",
             mode="w",
             encoding="utf-8",
         ) as f:
@@ -106,3 +110,14 @@ def check_if_data_already_saved(
     player_name: str, match_id: str, filepath: str = r"apps/data/raw_data/"
 ):
     return (match_id + ".json") in os.listdir(f"{filepath}{player_name}/game_data")
+
+
+def remove_already_stored_match_ids(summoner_name: str, match_list: list[str]):
+    if not os.path.exists(rf"apps/data/raw_data/{summoner_name}"):
+        return match_list
+    all_match_ids = [
+        match_id.replace(".json", "")
+        for match_id in os.listdir(rf"apps/data/raw_data/{summoner_name}/game_data")
+    ]
+
+    return [match_id for match_id in match_list if match_id not in all_match_ids]
