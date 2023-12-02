@@ -1,5 +1,6 @@
 from enum import Enum
 from collections import namedtuple
+from enum import auto
 
 
 # import requests
@@ -22,6 +23,12 @@ class Queue(Enum):
     RANKED = 420
     NORMAL = 400
     ARAM = 450
+
+
+class Operation(Enum):
+    GET_DATA_FROM_API = auto()
+    SAVE_RAW_DATA_TO_FILE = auto()
+    GET_DATA_FROM_FILE = auto()
 
 
 regions = {

@@ -1,5 +1,6 @@
 import logging
 import requests
+import json
 
 import riotwatcher
 from riotwatcher import LolWatcher
@@ -69,10 +70,6 @@ def get_match_ids(
             )
 
     logging.info(f"Match ids Length: {len(match_ids)}")
-
-    estimated_execution_time_s = (
-        len(match_ids) // 2 + int(len(match_ids) * 2 / 100) * 100
-    )
 
     return match_ids
 
@@ -213,22 +210,30 @@ def create_match_data_iterator(
 
     Args:
         lolwatcher: riotwatcher API
-        summoner_name: summoner name of player
-        tagline: tagline of player
-        server: server of player
-        queue: game mode
-        number_of_games: amount of games
+        match_list: list of match ids
+        region: region of player
         till_season_patch: patch (stop criteria)
 
     Returns:
         game data and timeline data as generator
 
     """
+    number_of_games = len(match_list)
 
-    helper.print_progress_bar(iteration=12, total=234)
+    # 2 requests per seconds + calculate how many 429s (per game 2 requests (game_data, time_line_data)
+    # + 100 seconds of wait time
+    estimated_execution_time_s = number_of_games // 2 + (
+        (number_of_games * 2 / 100) * 100
+    )
+
+    print(
+        f"Estimated Execution Time: {int(estimated_execution_time_s // 60)} Minutes and {int(estimated_execution_time_s % 60)} Seconds."
+    )
+
+    helper.print_progress_bar(iteration=0, total=number_of_games)
 
     for index, match_id in enumerate(match_list, start=1):
-        helper.print_progress_bar(iteration=index, total=len(match_list))
+        helper.print_progress_bar(iteration=index, total=number_of_games)
         match_data = get_match_data(
             lolwatcher=lolwatcher,
             match_id=match_id,
@@ -243,3 +248,18 @@ def create_match_data_iterator(
         )
 
         yield constants.MatchData(match_data, time_line_data)
+
+
+def local_game_data_fetcher(filepath: str, match_list: list[str]) -> Iterator:
+    for match_id in match_list:
+        with open(
+            file=f"{filepath}/game_data/{match_id}.json", mode="r", encoding="utf-8"
+        ) as f:
+            match_data = json.load(f)
+        with open(
+            file=f"{filepath}/time_line_data/{match_id}.json",
+            mode="r",
+            encoding="utf-8",
+        ) as f:
+            time_line_data = json.load(f)
+        yield constants.MatchData(match_data=match_data, time_line_data=time_line_data)
