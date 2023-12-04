@@ -72,7 +72,8 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
 
     player_data.update(
         match_data_extractor.get_lane_opponent(
-            match_data["info"]["participants"], participant_index
+            match_data["info"]["participants"],
+            participant_index,
         )
     )
 
@@ -95,6 +96,12 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
     player_data.update(
         match_data_extractor.get_ally_team_kills_deaths(
             match_data["info"]["participants"], player_data["teamId"]
+        )
+    )
+
+    player_data.update(
+        match_data_extractor.get_participants_puuids(
+            match_meta_data=match_data["metadata"], puuid=puuid
         )
     )
 
