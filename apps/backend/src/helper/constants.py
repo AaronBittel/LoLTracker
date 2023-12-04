@@ -26,7 +26,6 @@ class Queue(Enum):
 
 
 class Operation(Enum):
-    GET_DATA_FROM_API = auto()
     SAVE_RAW_DATA_TO_FILE = auto()
     GET_DATA_FROM_FILE = auto()
 

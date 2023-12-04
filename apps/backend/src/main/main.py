@@ -46,20 +46,6 @@ def main(
     game_mode_directory_name = queue.name.capitalize()
 
     match operation:
-        case constants.Operation.GET_DATA_FROM_API:
-            match_data_iterator = game_data_fetcher.create_match_data_iterator(
-                lolwatcher=lolwatcher,
-                match_list=match_list,
-                region=region,
-                till_season_patch=till_season_patch,
-            )
-
-            df = game_data_extractor.create_dataframe(
-                game_data_iterator=match_data_iterator, puuid=puuid
-            )
-            df = data_processor.process_dataframe(df)
-            df.to_parquet(f"apps/data/dataframes/{player_directory_name}.parquet")
-
         case constants.Operation.SAVE_RAW_DATA_TO_FILE:
             if os.path.exists(
                 rf"apps/data/raw_data/{player_directory_name}/{game_mode_directory_name}"
