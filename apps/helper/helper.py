@@ -152,4 +152,4 @@ def get_all_games_in_local(
 
 
 def order_preserving_difference(list1, list2):
-    return [x for x in list1 if not x in list2]
+    return [x for x in list1 if x not in list2]

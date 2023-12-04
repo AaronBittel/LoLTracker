@@ -252,12 +252,18 @@ def create_match_data_iterator(
         yield constants.MatchData(match_data, time_line_data)
 
 
-def local_game_data_fetcher(filepath: str, match_list: list[str]) -> Iterator:
+def local_game_data_fetcher(
+    filepath: str, match_list: list[str], till_season_patch: constants.Patch
+) -> Iterator:
     for match_id in match_list:
         with open(
             file=rf"{filepath}/game_data/{match_id}.json", mode="r", encoding="utf-8"
         ) as f:
             match_data = json.load(f)
+
+            if extract_match_patch(match_data) < till_season_patch:
+                break
+
         with open(
             file=f"{filepath}/time_line_data/{match_id}.json",
             mode="r",

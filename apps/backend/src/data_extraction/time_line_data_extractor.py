@@ -53,7 +53,7 @@ def get_total_team_gold_diff(
 
     total_team_gold_diff_at_minutes = {}
 
-    at = [5, 10, 15, 20] if at is None else at
+    at = [x for x in range(1, 41, 1)] if at is None else at
 
     at = [minute for minute in at if minute <= game_duration]
 

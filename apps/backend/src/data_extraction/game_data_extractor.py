@@ -2,6 +2,7 @@ import logging
 import pandas as pd
 
 from typing import Iterator
+from apps.backend.src.data_collection import game_data_fetcher
 from apps.backend.src.data_extraction import match_data_extractor
 from apps.backend.src.data_extraction import time_line_data_extractor
 from apps.backend.src.helper import constants
@@ -47,14 +48,17 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
         )
     )
 
-    player_data.update(
-        match_data_extractor.get_data(
-            game_data=match_data["info"]["participants"][participant_index][
-                "challenges"
-            ],
-            columns=constants.PARTICIPANT_CHALLENGES_DATA_COLUMNS,
+    if game_data_fetcher.extract_match_patch(match_info=match_data) > constants.Patch(
+        12, 2
+    ):
+        player_data.update(
+            match_data_extractor.get_data(
+                game_data=match_data["info"]["participants"][participant_index][
+                    "challenges"
+                ],
+                columns=constants.PARTICIPANT_CHALLENGES_DATA_COLUMNS,
+            )
         )
-    )
 
     player_data.update(
         match_data_extractor.get_champions_played_ally_team_first(
@@ -62,6 +66,9 @@ def extract_match_data(match_data: dict, puuid: str) -> dict[str, str | int | bo
             team_id=player_data["teamId"],
         )
     )
+
+    if match_data.get("info", {}).get("participants", -1) == -1:
+        print(match_data["metadata"]["matchId"])
 
     player_data.update(
         match_data_extractor.get_lane_opponent(

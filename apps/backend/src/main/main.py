@@ -106,6 +106,7 @@ def main(
                 match_data_iterator = game_data_fetcher.local_game_data_fetcher(
                     filepath=rf"apps/data/raw_data/{player_directory_name}/{game_mode_directory_name}",
                     match_list=match_list_in_file,
+                    till_season_patch=till_season_patch,
                 )
 
                 file_df = game_data_extractor.create_dataframe(
@@ -156,12 +157,12 @@ def main(
 
 if __name__ == "__main__":
     input_values = {
-        "summoner_name": "정신력남자",
-        "tagline": "KR1",
-        "server": "KR",
+        "summoner_name": "noway2u",  # "정신력남자",
+        "tagline": "EUW1",
+        "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 340,
-        "till_season_patch": constants.Patch(13, 19),
+        "number_of_games": 1000,
+        "till_season_patch": constants.Patch(13, 1),
         "operation": constants.Operation.GET_DATA_FROM_FILE,
         "test_data": False,
     }
