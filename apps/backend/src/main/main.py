@@ -157,12 +157,12 @@ def main(
 
 if __name__ == "__main__":
     input_values = {
-        "summoner_name": "noway2u",  # "정신력남자",
-        "tagline": "EUW1",
+        "summoner_name": "TRM Nicigeddon",  # "정신력남자",
+        "tagline": "6199",
         "server": "EUW1",
         "queue": constants.Queue.RANKED,
-        "number_of_games": 1000,
-        "till_season_patch": constants.Patch(13, 1),
+        "number_of_games": 500,
+        "till_season_patch": constants.Patch(11, 1),
         "operation": constants.Operation.GET_DATA_FROM_FILE,
         "test_data": False,
     }

@@ -12,6 +12,7 @@ def get_lane_opponent(participants_game_data: list[dict], participant_index: int
             continue
         if player_team_position == participant["teamPosition"]:
             return {"laneOpponent": participant["championName"]}
+    return {"laneOpponent": None}
 
 
 def get_champions_played(participants_game_data: list[dict]):
@@ -88,4 +89,12 @@ def get_ally_team_kills_deaths(participants_game_data: list[dict], team_id: int)
         "totalAllyTeamDeaths": sum(
             participants_game_data[i]["deaths"] for i in range(start, end)
         ),
+    }
+
+
+def get_participants_puuids(match_meta_data: dict, puuid: str):
+    return {
+        f"participant{i}": participant_puuid
+        for i, participant_puuid in enumerate(match_meta_data["participants"], start=1)
+        if participant_puuid != puuid
     }
