@@ -1,15 +1,16 @@
 import logging
-import time
 import os
-import pandas as pd
+import time
 
+import pandas as pd
 from riotwatcher import LolWatcher
 
 from apps.backend.src.data_collection import game_data_fetcher
 from apps.backend.src.data_extraction import game_data_extractor
-from apps.helper import helper
-from apps.backend.src.helper import constants
 from apps.backend.src.data_processing import data_processor
+from apps.backend.src.data_models import game_data_models
+from apps.backend.src.helper import constants
+from apps.helper import helper
 
 
 def main(
@@ -141,6 +142,23 @@ def main(
                 df.to_parquet(f"apps/data/dataframes/{player_directory_name}.parquet")
 
 
+def test():
+    with open(
+        file=r"apps\data\raw_data\Don_Noway\Ranked\game_data\EUW1_6241289619.json",
+        mode="r",
+        encoding="utf-8",
+    ) as f:
+        import json
+
+        data = json.load(fp=f)
+        metadata = data["metadata"]
+
+        base_match_data = game_data_models.MetadataModel(**metadata)
+        # player_match_data = game_data_models.PlayerGameData(**data)
+
+        print(base_match_data.matchId)
+
+
 if __name__ == "__main__":
     input_values = {
         "summoner_name": "TRM Nicigeddon",  # "정신력남자",
@@ -155,7 +173,8 @@ if __name__ == "__main__":
 
     start = time.time()
 
-    main(**input_values)
+    test()
+    # main(**input_values)
 
     end = time.time()
     diff = end - start
