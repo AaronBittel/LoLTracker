@@ -201,6 +201,7 @@ ID_CHAMPION_MAPPING = {
     887: "Gwen",
     120: "Hecarim",
     74: "Heimerdinger",
+    910: "Hwei",
     420: "Illaoi",
     39: "Irelia",
     427: "Ivern",
