@@ -23,6 +23,7 @@ class Queue(Enum):
     RANKED = 420
     NORMAL = 400
     ARAM = 450
+    QUICKPLAY = 490
 
 
 class Operation(Enum):
