@@ -24,6 +24,7 @@ class Queue(Enum):
     NORMAL = 400
     ARAM = 450
     QUICKPLAY = 490
+    ARENA = 1700
 
 
 class Operation(Enum):
